@@ -420,9 +420,9 @@ class Processor():
 			self.print_log('Model:   {}.'.format(self.arg.model))
 			self.print_log('Weights: {}.'.format(self.arg.weights))
 			
-			# print('\nComputing features on test set\n')
-			# self.eval(
-			#     epoch=0, save_score=self.arg.save_score, loader_name=['test'])
+			print('\nComputing features on test set\n')
+			self.eval(
+			    epoch=0, save_score=self.arg.save_score, loader_name=['test'])
 			print('\nComputing features on train set\n')
 			self.eval(
 				epoch=0, save_score=self.arg.save_score, loader_name=['train'])
