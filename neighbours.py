@@ -3,6 +3,8 @@ import numpy as np
 
 UNSEEN_CLASSES = [3,8,11,16,51]
 
+#TODO: Normalize the vectors to be unit vectors.
+
 def get_nn(classnames, Full_data, one_example):
 	nbrs = NearestNeighbors(n_neighbors=4, algorithm='auto', metric='cosine').fit(Full_data) 
 	distances, nn_indices = nbrs.kneighbors(one_example)
