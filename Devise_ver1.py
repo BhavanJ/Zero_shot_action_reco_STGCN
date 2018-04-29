@@ -17,12 +17,13 @@ import pdb
 plt.ion()
 use_cuda = torch.cuda.is_available()
 
+#TODO: for loss function u MIGHT WANT TO SET grad function to zero
 #TODO: Verify the below thing about unseen classes
 UNSEEN_CLASSES = [3,8,11,16,51]
 DIM_STGCN = 256
 DIM_LANGAUGE = 600
 MARGIN = 0.1
-N_EPOCH = 10
+N_EPOCH = 100
 NO_CLASS = 60
 BATCH_SIZE = 64
 
@@ -63,13 +64,13 @@ class Custom_devise_loss(nn.Module):
 
 		batch_sz = vision_feature_projected.shape[0]
 
-		margin_var = Variable(torch.ones(batch_sz, 1,)*self.margin)
+		margin_var = Variable(torch.ones(batch_sz)*self.margin)
 		margin_var = margin_var.cuda() if use_cuda else margin_var
 
-		zero_var = Variable(torch.zeros(batch_sz, 1,))
+		zero_var = Variable(torch.zeros(batch_sz))
 		zero_var = zero_var.cuda() if use_cuda else zero_var
 
-		#loss_val = 0
+		loss_val = 0
 		for cls_no in range(NO_CLASS):
 
 			# if cls_no == class_label:
@@ -80,9 +81,8 @@ class Custom_devise_loss(nn.Module):
 			# 	# loss_val += torch.max(0, self.margin - (true_embedding*vision_feature_projected) + (langauge_embeddings[cls_no].view(1,-1).repeat(batch_sz,1)*vision_feature_projected)  )
 			# 	loss_val += torch.sum(torch.max(zero_var, margin_var - (true_embedding*vision_feature_projected) + (langauge_embeddings[cls_no].view(1,-1).repeat(batch_sz,1)*vision_feature_projected)  ) )
 
-			loss_val += torch.sum(torch.max(zero_var, margin_var - (true_embedding*vision_feature_projected) + (langauge_embeddings[cls_no].view(1,-1).repeat(batch_sz,1)*vision_feature_projected)  ) )
-
-		pdb.set_trace()
+			loss_val += torch.sum( torch.max(zero_var, margin_var - torch.sum((true_embedding*vision_feature_projected),dim=1) + torch.sum((langauge_embeddings[cls_no].view(1,-1).repeat(batch_sz,1)*vision_feature_projected),dim=1)  ),dim=0 )
+			#pdb.set_trace()	
 		
 		return loss_val/batch_sz    
 
