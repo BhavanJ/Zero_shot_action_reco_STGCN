@@ -4,7 +4,7 @@ import numpy as np
 UNSEEN_CLASSES = [3,8,11,16,51]
 
 def get_nn(classnames, Full_data, one_example):
-	nbrs = NearestNeighbors(n_neighbors=4, algorithm='auto', metric='cosine').fit(Full_data) # pass one training example here
+	nbrs = NearestNeighbors(n_neighbors=4, algorithm='auto', metric='cosine').fit(Full_data) 
 	distances, nn_indices = nbrs.kneighbors(one_example)
 	print('nearest neighbours:')
 	for i, index in enumerate(nn_indices[0][1:]):
