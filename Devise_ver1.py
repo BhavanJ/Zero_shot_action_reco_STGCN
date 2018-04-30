@@ -14,6 +14,9 @@ from torch.utils.data import Dataset, DataLoader
 import matplotlib.pyplot as plt
 import pdb
 
+from sklearn import preprocessing
+
+
 plt.ion()
 use_cuda = torch.cuda.is_available()
 
@@ -26,6 +29,12 @@ MARGIN = 0.1
 N_EPOCH = 100
 NO_CLASS = 60
 BATCH_SIZE = 64
+LR = 0.001
+MOMENTUN = 0.9
+
+
+NORMALIZE_VIS = True
+NORMALIZE_EMB = True
 
 FEATURE_DIR = './work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test/'
 SKELETON_DIR = './data/NTU-RGB-D_zero_shot/xview/'
@@ -83,19 +92,29 @@ class Custom_devise_loss(nn.Module):
 
 			loss_val += torch.sum( torch.max(zero_var, margin_var - torch.sum((true_embedding*vision_feature_projected),dim=1) + torch.sum((langauge_embeddings[cls_no].view(1,-1).repeat(batch_sz,1)*vision_feature_projected),dim=1)  ),dim=0 )
 			#pdb.set_trace()	
-		
-		return loss_val/batch_sz    
+	
+		loss_val = loss_val/batch_sz
 
-
+		return loss_val
 
 class DataLoaderSTGCN(Dataset):
 	def __init__(self,train_mode):
 
 		if train_mode == True:
+
 			self.features_array =  np.load(FEATURE_DIR+'features_array_train.npy')
+			if NORMALIZE_VIS == True:
+				self.features_array = preprocessing.normalize(self.features_array, axis=1, copy=False)	
 			self.labels_array   =  np.load(FEATURE_DIR+'labels_array_train.npy')
+
+			#norm = np.linalg.norm(self.features_array,ord = 1, axis = 1)
+ 			#np.sqrt(np.sum((self.features_array[0])*(self.features_array[0])))
+
 		if train_mode == False:
+			
 			self.features_array =  np.load(FEATURE_DIR+'features_array_test.npy')
+			if NORMALIZE_VIS == True:
+				self.features_array = preprocessing.normalize(self.features_array, axis=1, copy=False)	
 			self.labels_array   =  np.load(FEATURE_DIR+'labels_array_test.npy')
 
 		#self.langauge_embeddings  =	 np.load(FEATURE_DIR+'class_embeddings_temp.npy')	
@@ -116,6 +135,26 @@ class DataLoaderSTGCN(Dataset):
 		}
 		return sample
 
+
+def test_accuracy():
+
+	correct = 0.0
+	total = 0.0
+	for batch_idx,batch_data in enumerate(test_dataloader):
+
+		STGCN_feature = Variable(batch_data['feature']) 
+		class_label = Variable(batch_data['label'])
+		projected_STGCN_feature = net(STGCN_feature)
+		_,predicted_cls = torch.max(torch.sum(langauge_embeddings*projected_STGCN_feature,dim=1),dim=0)
+
+		if predicted_cls.data[0] == class_label.data[0][0]:
+			correct+=1.0
+		total+=1.0
+		# pdb.set_trace()
+
+	acc = correct/total*100.0
+	return acc	
+	
 ##################################################################################################################
 
 train_dataset = DataLoaderSTGCN(train_mode = True)
@@ -130,7 +169,14 @@ print(net)
 
 criterion = Custom_devise_loss(margin = MARGIN)
 #criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+optimizer = optim.SGD(net.parameters(), lr=LR, momentum=MOMENTUN)
+
+
+if NORMALIZE_EMB == True:
+	# pdb.set_trace()
+	# norm = np.linalg.norm(langauge_embeddings,ord = 1, axis = 1).reshape(60,1)
+	# langauge_embeddings = langauge_embeddings/norm	
+	langauge_embeddings = preprocessing.normalize(langauge_embeddings, axis=1, copy=False)
 
 langauge_embeddings = Variable(torch.FloatTensor(langauge_embeddings))
 langauge_embeddings = langauge_embeddings.cuda() if use_cuda else langauge_embeddings
@@ -156,14 +202,21 @@ for epoch in range(N_EPOCH):
 		loss = criterion(projected_STGCN_feature,langauge_embeddings,class_label)
 		loss.backward()
 		optimizer.step()
-		running_loss += loss.data
+		running_loss += loss.data[0]
 
-	print('Epoch: ' + str(epoch) + '  Loss:' + str(running_loss))    
+	running_loss = running_loss/len(train_dataloader)
+	
+	accuracy = test_accuracy()
+	# pdb.set_trace()
+	print('Epoch: ' + str(epoch) + '  Train Loss: ' + str(running_loss) + '  Test Accuracy: ' + str(accuracy))    
 
 print('Finished Training')
 pdb.set_trace()
 
 torch.save(net.state_dict(), MODEL_PATH)
+
+
+
 
 
 ####################################################################################################
