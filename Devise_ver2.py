@@ -19,7 +19,7 @@ from sklearn.neighbors import NearestNeighbors
 
 #plt.ion()
 use_cuda = torch.cuda.is_available()
-print('lr=0.0001, test_batch=64, annealling, neighbour_loss, 100 epochs, Adam')
+print('lr=0.001, test_batch=64, annealling, neighbour_loss, 100 epochs, Adam', "UNSEEN_CLASSES_ONLY") # change test_batch = 32 for 70% at 60 epochs
 #TODO: for loss function u MIGHT WANT TO SET grad function to zero
 #TODO: Verify the below thing about unseen classes
 UNSEEN_CLASSES = [3,8,11,16,51]
@@ -153,13 +153,12 @@ def get_nn(classnames, Full_data, one_example):
 
 def test_accuracy(only_unseen=False):
 
+	if only_unseen:
+		embeddings = langauge_embeddings[UNSEEN_CLASSES].data.numpy()
+	else:
+		embeddings = langauge_embeddings.data.numpy()
 
-	# if only_unseen:
-	# 	embeddings = langauge_embeddings[UNSEEN_CLASSES].data.numpy()
-	# else:
-	# 	embeddings = langauge_embeddings.data.numpy()
-
-	embeddings = np.load(FEATURE_DIR+'class_embeddings_temp.npy')
+	
 	nbrs = NearestNeighbors(n_neighbors=4, algorithm='auto', metric='cosine').fit(embeddings) # try with kd_tree later	
 
 	correct = 0.0
@@ -176,11 +175,20 @@ def test_accuracy(only_unseen=False):
 		#_,predicted_cls = torch.max(torch.sum(embeddings*projected_STGCN_feature,dim=1),dim=0)
 
 
-		##### Compute predicted class using nearest neighbours (cosine similarity + kd_tree)
-		
-		_, predicted_cls = nbrs.kneighbors(projected_STGCN_feature.data)
+		##### Compute predicted class using nearest neighbours 
 
-		if predicted_cls[0][0] == class_label.data[0][0]:
+		if only_unseen:
+			_, unseen_index = nbrs.kneighbors(projected_STGCN_feature.data)
+			#print(unseen_index[0][0])
+			predicted_label = UNSEEN_CLASSES[unseen_index[0][0]]
+
+		
+		else:
+			_, predicted_cls = nbrs.kneighbors(projected_STGCN_feature.data)
+			predicted_label = predicted_cls[0][0]
+
+
+		if predicted_label == class_label.data[0][0]:
 
 		#if predicted_cls.data[0] == class_label.data[0][0]:
 			correct+=1.0
