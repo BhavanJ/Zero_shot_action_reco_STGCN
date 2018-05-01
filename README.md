@@ -15,7 +15,7 @@ To generate embeddings for action class names:
       https://github.com/epfml/sent2vec
 
 
-- Navigate to the fasttext folder and run the fasttext binary 
+- Navigate to the fasttext folder and run the fasttext binary.
       Provide your downloaded model as a .bin and your sentences as a txt file
 
       $ ./fasttext print-sentence-vectors model.bin < text.txt > outfile.txt
