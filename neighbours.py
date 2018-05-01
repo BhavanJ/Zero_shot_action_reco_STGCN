@@ -28,6 +28,28 @@ def generate_embeddings():
 				embeddings[i][j]=float(number)
 				
 	np.save('class_embeddings', embeddings)
+	
+	# strip labels out 
+	classnames_length = []
+	with open('action_classes_original.txt', 'r') as f:
+	    classnames = f.read().split('\n')
+	    for c in classnames:
+		l = len(c.split(' '))
+		#print(c, l)
+		classnames_length.append(l)
+	
+	# generate bigram embeddings from output file (with label names)
+	bigram_embeddings = np.zeros((60,700), dtype=float)
+	with open("output_embeddings.txt") as input_file:
+	    for i, line in enumerate(input_file):
+		line = line.strip()
+		line_array = line.split()
+		line_em = line_array[classnames_length[i]:]
+		for j, number in enumerate(line_em):
+		    bigram_embeddings[i][j]=float(number)
+
+	# save as a numpy array
+	np.save('bigram_embeddings', bigram_embeddings)
 
 
 def main():
