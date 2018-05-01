@@ -16,7 +16,7 @@ To generate embeddings for action class names:
 
 
 - Navigate to the fasttext folder and run the fasttext binary 
-- Provide your downloaded model as a .bin and your sentences as a txt file
+      Provide your downloaded model as a .bin and your sentences as a txt file
 
       $ ./fasttext print-sentence-vectors model.bin < text.txt > outfile.txt
       $ ./fasttext print-sentence-vectors wiki_bigrams.bin < action_classes_original.txt > output_embeddings.txt
@@ -25,7 +25,6 @@ To generate embeddings for action class names:
   This will save embeddings to the output txt file
   
   
-- 
 
 
 
