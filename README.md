@@ -24,6 +24,8 @@ To generate embeddings for action class names:
       
   This will save embeddings to the output txt file
   
+- Run generate_embeddings() in neighbours.py to get these embeddings as a .npy
+  
   
 
 
