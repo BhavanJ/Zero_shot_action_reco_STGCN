@@ -147,6 +147,49 @@ def get_nn(classnames, Full_data, one_example):
 
     return nn_indices[0][0], distances # nn_indices is a array of length 3
     #print classnames[nn_indices]
+	
+	
+
+def top_k_accuracy(k=3, only_unseen=False):
+	# Uses nearest neighbours 
+	if only_unseen:
+		embeddings = langauge_embeddings[UNSEEN_CLASSES].data.numpy()
+	else:
+		embeddings = langauge_embeddings.data.numpy()
+
+
+	nbrs = NearestNeighbors(n_neighbors=k, algorithm='auto', metric='cosine').fit(embeddings) 
+
+
+	correct = 0.0
+	total = 0.0
+	for batch_idx,batch_data in enumerate(test_dataloader):
+
+		STGCN_feature = Variable(batch_data['feature']) 
+		class_label = Variable(batch_data['label'])
+		projected_STGCN_feature = net(STGCN_feature)
+
+
+		if only_unseen:
+			_, unseen_index = nbrs.kneighbors(projected_STGCN_feature.data)
+			#print(unseen_index[0])
+			#predicted_label = UNSEEN_CLASSES[unseen_index[0]]
+			predicted_label = [UNSEEN_CLASSES[unseen_index[0][x]] for x in range(k)] # or in range k 
+			#print('class_label', class_label)
+
+		else:
+			_, predicted_cls = nbrs.kneighbors(projected_STGCN_feature.data)
+			predicted_label = predicted_cls[0]
+
+
+		#if predicted_label == class_label.data[0][0]:
+		if class_label.data[0][0] in set(predicted_label):
+			correct+=1.0
+		total+=1.0
+		# pdb.set_trace()
+
+	acc = correct/total*100.0
+	return acc	
 
 
 
@@ -270,9 +313,11 @@ for epoch in range(N_EPOCH):
 
 	running_loss = running_loss/len(train_dataloader)
 	
+	top_k = top_k_accuracy(k=3, only_unseen=False)
+
 	accuracy = test_accuracy()
 	# pdb.set_trace()
-	print('Epoch: ' + str(epoch) + '  Train Loss: ' + str(running_loss) + '  Test Accuracy: ' + str(accuracy))    
+	print('Epoch: ' + str(epoch) + '  Train Loss: ' + str(running_loss) + '  Test Accuracy: ' + str(accuracy) + ' Top k Accuracy: ', str(top_k))    
 
 print('Finished Training')
 #pdb.set_trace()
