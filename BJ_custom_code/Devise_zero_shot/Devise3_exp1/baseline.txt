@@ -1,0 +1,100 @@
+with random embeddings
+
+
+bjasani@Psych-1133:~/Desktop/CMU_HW/VLR_project/STGN/st-gcn/Devise_zero_shot$ python Devise_ver3.py 
+Devise(
+  (fc1): Linear(in_features=256, out_features=700, bias=True)
+)
+Before training:   Test Accuracy: 1.43304158542Test unseen acc: 0.0Test unseen only acc:12.7315307643
+Epoch: 0  Train Loss: 4.81667604049  Test Accuracy: 12.9744682781Test unseen acc: 0.0Test unseen only acc:15.925058548
+Epoch: 1  Train Loss: 3.14021362375  Test Accuracy: 43.4946260941Test unseen acc: 0.0Test unseen only acc:19.4166489248
+Epoch: 2  Train Loss: 1.92517664786  Test Accuracy: 59.5211101537Test unseen acc: 0.0Test unseen only acc:19.9489035555
+Epoch: 3  Train Loss: 1.31148216161  Test Accuracy: 62.8089429051Test unseen acc: 0.0Test unseen only acc:20.9069618906
+Epoch: 4  Train Loss: 1.02632310501  Test Accuracy: 64.0605868215Test unseen acc: 0.0Test unseen only acc:20.097934852
+Epoch: 5  Train Loss: 0.868613548853  Test Accuracy: 64.6365244207Test unseen acc: 0.0Test unseen only acc:20.6727698531
+Epoch: 6  Train Loss: 0.76853718272  Test Accuracy: 65.1535077774Test unseen acc: 0.0Test unseen only acc:20.6301894826
+Epoch: 7  Train Loss: 0.699137661137  Test Accuracy: 65.5797922997Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 8  Train Loss: 0.647717839645  Test Accuracy: 65.7385152601Test unseen acc: 0.0Test unseen only acc:20.6727698531
+Epoch: 9  Train Loss: 0.607876524219  Test Accuracy: 65.9425876377Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 10  Train Loss: 0.575916765741  Test Accuracy: 66.1103804816Test unseen acc: 0.0Test unseen only acc:20.4385778156
+Epoch: 11  Train Loss: 0.549691688242  Test Accuracy: 66.4142215773Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 12  Train Loss: 0.527757905258  Test Accuracy: 66.4822457031Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 13  Train Loss: 0.508738492208  Test Accuracy: 66.5366650039Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 14  Train Loss: 0.492062483535  Test Accuracy: 66.6545734887Test unseen acc: 0.0Test unseen only acc:20.2043857782
+Epoch: 15  Train Loss: 0.478043602076  Test Accuracy: 66.7588771484Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 16  Train Loss: 0.465120837755  Test Accuracy: 66.8677157499Test unseen acc: 0.0Test unseen only acc:20.1192250373
+Epoch: 17  Train Loss: 0.453781993025  Test Accuracy: 66.9130651671Test unseen acc: 0.0Test unseen only acc:20.1192250373
+Epoch: 18  Train Loss: 0.443454936809  Test Accuracy: 67.0037640016Test unseen acc: 0.0Test unseen only acc:20.1405152225
+Epoch: 19  Train Loss: 0.434012925183  Test Accuracy: 67.1987664959Test unseen acc: 0.0Test unseen only acc:20.1405152225
+Epoch: 20  Train Loss: 0.425449912471  Test Accuracy: 67.2078363793Test unseen acc: 0.0Test unseen only acc:20.1405152225
+Epoch: 21  Train Loss: 0.417792015881  Test Accuracy: 67.2441159131Test unseen acc: 0.0Test unseen only acc:20.2043857782
+Epoch: 22  Train Loss: 0.410423690246  Test Accuracy: 67.212371321Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 23  Train Loss: 0.4037489372  Test Accuracy: 67.4209786404Test unseen acc: 0.0Test unseen only acc:20.2682563338
+Epoch: 24  Train Loss: 0.397677467487  Test Accuracy: 67.4436533491Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 25  Train Loss: 0.391740396343  Test Accuracy: 67.5660967757Test unseen acc: 0.0Test unseen only acc:20.3959974452
+Epoch: 26  Train Loss: 0.386500910311  Test Accuracy: 67.5343521836Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 27  Train Loss: 0.381528445057  Test Accuracy: 67.5706317174Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 28  Train Loss: 0.376625809073  Test Accuracy: 67.5706317174Test unseen acc: 0.0Test unseen only acc:20.4598680009
+Epoch: 29  Train Loss: 0.372203367479  Test Accuracy: 67.6613305519Test unseen acc: 0.0Test unseen only acc:20.3959974452
+Epoch: 30  Train Loss: 0.367929002753  Test Accuracy: 67.7202847943Test unseen acc: 0.0Test unseen only acc:20.2682563338
+Epoch: 31  Train Loss: 0.363964186222  Test Accuracy: 67.7837739785Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 32  Train Loss: 0.360210681293  Test Accuracy: 67.8109836289Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 33  Train Loss: 0.356601761088  Test Accuracy: 67.7837739785Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 34  Train Loss: 0.353046108644  Test Accuracy: 67.8654029296Test unseen acc: 0.0Test unseen only acc:20.5237385565
+Epoch: 35  Train Loss: 0.349965082302  Test Accuracy: 67.8472631627Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 36  Train Loss: 0.346773014907  Test Accuracy: 67.9016824634Test unseen acc: 0.0Test unseen only acc:20.566318927
+Epoch: 37  Train Loss: 0.343637083857  Test Accuracy: 67.8971475217Test unseen acc: 0.0Test unseen only acc:20.566318927
+Epoch: 38  Train Loss: 0.3408008616  Test Accuracy: 67.8971475217Test unseen acc: 0.0Test unseen only acc:20.5876091122
+Epoch: 39  Train Loss: 0.338219818721  Test Accuracy: 67.9107523468Test unseen acc: 0.0Test unseen only acc:20.5876091122
+Epoch: 40  Train Loss: 0.33551022736  Test Accuracy: 67.9787764727Test unseen acc: 0.0Test unseen only acc:20.5237385565
+Epoch: 41  Train Loss: 0.333240159767  Test Accuracy: 67.9878463562Test unseen acc: 0.0Test unseen only acc:20.5876091122
+Epoch: 42  Train Loss: 0.330614813058  Test Accuracy: 68.0286608317Test unseen acc: 0.0Test unseen only acc:20.5450287418
+Epoch: 43  Train Loss: 0.32821912978  Test Accuracy: 68.0422656569Test unseen acc: 0.0Test unseen only acc:20.5237385565
+Epoch: 44  Train Loss: 0.325890524879  Test Accuracy: 68.0331957734Test unseen acc: 0.0Test unseen only acc:20.5237385565
+Epoch: 45  Train Loss: 0.323644244726  Test Accuracy: 68.0468005986Test unseen acc: 0.0Test unseen only acc:20.5450287418
+Epoch: 46  Train Loss: 0.321572172725  Test Accuracy: 68.0830801324Test unseen acc: 0.0Test unseen only acc:20.4811581861
+Epoch: 47  Train Loss: 0.319572388629  Test Accuracy: 68.0649403655Test unseen acc: 0.0Test unseen only acc:20.3959974452
+Epoch: 48  Train Loss: 0.3177229857  Test Accuracy: 68.0876150741Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 49  Train Loss: 0.315756684045  Test Accuracy: 68.0921500159Test unseen acc: 0.0Test unseen only acc:20.3959974452
+Epoch: 50  Train Loss: 0.31383850053  Test Accuracy: 68.1284295497Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 51  Train Loss: 0.312097957785  Test Accuracy: 68.1828488504Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 52  Train Loss: 0.310245540986  Test Accuracy: 68.2191283842Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 53  Train Loss: 0.308640396291  Test Accuracy: 68.2644778015Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 54  Train Loss: 0.307125831313  Test Accuracy: 68.2327332094Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 55  Train Loss: 0.305441168668  Test Accuracy: 68.3279669856Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 56  Train Loss: 0.303907265073  Test Accuracy: 68.3188971022Test unseen acc: 0.0Test unseen only acc:20.3108367043
+Epoch: 57  Train Loss: 0.30243240479  Test Accuracy: 68.3234320439Test unseen acc: 0.0Test unseen only acc:20.3959974452
+Epoch: 58  Train Loss: 0.301281734887  Test Accuracy: 68.355176636Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 59  Train Loss: 0.299609491753  Test Accuracy: 68.3642465194Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 60  Train Loss: 0.298365860239  Test Accuracy: 68.3959911115Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 61  Train Loss: 0.296792271071  Test Accuracy: 68.4232007619Test unseen acc: 0.0Test unseen only acc:20.4811581861
+Epoch: 62  Train Loss: 0.295500885778  Test Accuracy: 68.4413405288Test unseen acc: 0.0Test unseen only acc:20.4172876304
+Epoch: 63  Train Loss: 0.294350339224  Test Accuracy: 68.4458754705Test unseen acc: 0.0Test unseen only acc:20.4385778156
+Epoch: 64  Train Loss: 0.293114357994  Test Accuracy: 68.486689946Test unseen acc: 0.0Test unseen only acc:20.4385778156
+Epoch: 65  Train Loss: 0.291867108974  Test Accuracy: 68.4685501791Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 66  Train Loss: 0.29076079384  Test Accuracy: 68.5229694798Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 67  Train Loss: 0.289582774512  Test Accuracy: 68.5411092467Test unseen acc: 0.0Test unseen only acc:20.3321268895
+Epoch: 68  Train Loss: 0.288499649697  Test Accuracy: 68.5411092467Test unseen acc: 0.0Test unseen only acc:20.4385778156
+Epoch: 69  Train Loss: 0.287346784577  Test Accuracy: 68.5501791302Test unseen acc: 0.0Test unseen only acc:20.3108367043
+Epoch: 70  Train Loss: 0.286333525815  Test Accuracy: 68.5592490137Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 71  Train Loss: 0.285171062196  Test Accuracy: 68.5592490137Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 72  Train Loss: 0.284112655013  Test Accuracy: 68.5728538388Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 73  Train Loss: 0.283182226563  Test Accuracy: 68.5728538388Test unseen acc: 0.0Test unseen only acc:20.37470726
+Epoch: 74  Train Loss: 0.282223758957  Test Accuracy: 68.6045984309Test unseen acc: 0.0Test unseen only acc:20.3534170747
+Epoch: 75  Train Loss: 0.281138335334  Test Accuracy: 68.5955285475Test unseen acc: 0.0Test unseen only acc:20.3108367043
+Epoch: 76  Train Loss: 0.280258465006  Test Accuracy: 68.6499478482Test unseen acc: 0.0Test unseen only acc:20.2682563338
+Epoch: 77  Train Loss: 0.279324563372  Test Accuracy: 68.6544827899Test unseen acc: 0.0Test unseen only acc:20.3108367043
+Epoch: 78  Train Loss: 0.278536686991  Test Accuracy: 68.636343023Test unseen acc: 0.0Test unseen only acc:20.2682563338
+Epoch: 79  Train Loss: 0.277601457801  Test Accuracy: 68.6136683144Test unseen acc: 0.0Test unseen only acc:20.2256759634
+Epoch: 80  Train Loss: 0.276678670805  Test Accuracy: 68.6182032561Test unseen acc: 0.0Test unseen only acc:20.1192250373
+Epoch: 81  Train Loss: 0.275798645892  Test Accuracy: 68.6272731395Test unseen acc: 0.0Test unseen only acc:20.1618054077
+Epoch: 82  Train Loss: 0.275101944501  Test Accuracy: 68.6182032561Test unseen acc: 0.0Test unseen only acc:20.1618054077
+Epoch: 83  Train Loss: 0.274184782886  Test Accuracy: 68.6227381978Test unseen acc: 0.0Test unseen only acc:20.1192250373
+Epoch: 84  Train Loss: 0.273351740368  Test Accuracy: 68.6408779647Test unseen acc: 0.0Test unseen only acc:20.097934852
+Epoch: 85  Train Loss: 0.272651572553  Test Accuracy: 68.6590177316Test unseen acc: 0.0Test unseen only acc:20.0766446668
+Epoch: 86  Train Loss: 0.271774447157  Test Accuracy: 68.6816924403Test unseen acc: 0.0Test unseen only acc:20.1192250373
+Epoch: 87  Train Loss: 0.271200555867  Test Accuracy: 68.6952972654Test unseen acc: 0.0Test unseen only acc:20.0766446668
+Epoch: 88  Train Loss: 0.270394203122  Test Accuracy: 68.7179719741Test unseen acc: 0.0Test unseen only acc:20.0553544816
+Epoch: 89  Train Loss: 0.269541636551  Test Accuracy: 68.686227382Test unseen acc: 0.0Test unseen only acc:20.0127741111
+Epoch: 90  Train Loss: 0.2688308973  Test Accuracy: 68.6952972654Test unseen acc: 0.0Test unseen only acc:20.0340642964
+

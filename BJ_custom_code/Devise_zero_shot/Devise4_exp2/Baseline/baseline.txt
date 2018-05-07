@@ -1,0 +1,1413 @@
+############################
+############################
+############################
+############################
+LANGUAGE_EMBEDDING_RANDOM:  True
+############################
+############################
+############################
+############################
+Devise(
+  (fc1): Linear(in_features=256, out_features=700, bias=True)
+)
+Before training:
+###############
+All videos all classes       : Top1: 1.86839599111 Top2: 4.13133191238 Top3: 6.04507732076 Top5: 10.4530406784
+Unseen videos all classes    : Top1: 0.383223334043 Top2: 4.10900574835 Top3: 7.962529274 Top5: 16.3295720673
+Unseen videos unseen classes : Top1: 7.55801575474 Top2: 37.2791143283 Top3: 59.7828401107 Top5: - 
+################
+
+Epoch: 0  Train Loss: 1.64955798879
+###############
+All videos all classes       : Top1: 65.6160718335 Top2: 73.4796607864 Top3: 75.5929436307 Top5: 77.2436624189
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.3785394933 Top2: 51.4583776879 Top3: 66.1060251224 Top5: - 
+################
+
+Epoch: 1  Train Loss: 0.495869807292
+###############
+All videos all classes       : Top1: 67.1262074282 Top2: 74.0782730942 Top3: 75.9920185026 Top5: 77.375175729
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 23.7172663402 Top2: 48.5416223121 Top3: 64.7860336385 Top5: - 
+################
+
+Epoch: 2  Train Loss: 0.397392290389
+###############
+All videos all classes       : Top1: 67.6159811346 Top2: 74.2233912294 Top3: 76.2731848896 Top5: 77.4794793887
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 24.9946774537 Top2: 49.095167128 Top3: 62.7847562274 Top5: - 
+################
+
+Epoch: 3  Train Loss: 0.352721279197
+###############
+All videos all classes       : Top1: 67.8200535123 Top2: 74.5771166841 Top3: 76.3593487824 Top5: 77.5157589225
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 23.5469448584 Top2: 47.3706621248 Top3: 63.5512028955 Top5: - 
+################
+
+Epoch: 4  Train Loss: 0.325469465333
+###############
+All videos all classes       : Top1: 68.1828488504 Top2: 74.6814203437 Top3: 76.4636524421 Top5: 77.5520384563
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 24.8456461571 Top2: 47.7964658293 Top3: 62.1247604854 Top5: - 
+################
+
+Epoch: 5  Train Loss: 0.30698337646
+###############
+All videos all classes       : Top1: 68.2372681511 Top2: 74.6406058682 Top3: 76.4727223255 Top5: 77.5429685729
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 25.4843517139 Top2: 47.4984032361 Top3: 61.9331488184 Top5: - 
+################
+
+Epoch: 6  Train Loss: 0.292874247056
+###############
+All videos all classes       : Top1: 68.4005260532 Top2: 74.7630492948 Top3: 76.5135368011 Top5: 77.5928529318
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 25.8462848627 Top2: 46.6680860123 Top3: 61.805407707 Top5: - 
+################
+
+Epoch: 7  Train Loss: 0.282283742588
+###############
+All videos all classes       : Top1: 68.3234320439 Top2: 74.7630492948 Top3: 76.4999319759 Top5: 77.5973878736
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2733659783 Top2: 47.966787311 Top3: 60.9325101128 Top5: - 
+################
+
+Epoch: 8  Train Loss: 0.273477542649
+###############
+All videos all classes       : Top1: 68.5320393633 Top2: 74.8628180128 Top3: 76.5860958687 Top5: 77.6291324656
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.1230572706 Top2: 46.8809878646 Top3: 61.3796040026 Top5: - 
+################
+
+Epoch: 9  Train Loss: 0.266161341303
+###############
+All videos all classes       : Top1: 68.6408779647 Top2: 74.9399120221 Top3: 76.5815609269 Top5: 77.6427372908
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6985309772 Top2: 47.583563977 Top3: 61.038961039 Top5: - 
+################
+
+Epoch: 10  Train Loss: 0.259967697025
+###############
+All videos all classes       : Top1: 68.8404154007 Top2: 75.0215409732 Top3: 76.5997006938 Top5: 77.6155276405
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5714285714 Top2: 47.5196934213 Top3: 60.378965297 Top5: - 
+################
+
+Epoch: 11  Train Loss: 0.25482269451
+###############
+All videos all classes       : Top1: 68.7859961 Top2: 75.0351457984 Top3: 76.6178404608 Top5: 77.6155276405
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 47.1577602725 Top3: 60.7834788163 Top5: - 
+################
+
+Epoch: 12  Train Loss: 0.250045175298
+###############
+All videos all classes       : Top1: 68.8812298762 Top2: 75.0351457984 Top3: 76.6586549363 Top5: 77.6427372908
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4643389397 Top2: 46.4126037897 Top3: 61.3583138173 Top5: - 
+################
+
+Epoch: 13  Train Loss: 0.246071600831
+###############
+All videos all classes       : Top1: 68.8766949345 Top2: 75.0487506236 Top3: 76.613305519 Top5: 77.6608770577
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.6352991271 Top2: 47.1790504577 Top3: 60.6344475197 Top5: - 
+################
+
+Epoch: 14  Train Loss: 0.242401138941
+###############
+All videos all classes       : Top1: 68.9084395266 Top2: 75.0306108567 Top3: 76.6314452859 Top5: 77.6336674074
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.337236534 Top2: 46.731956568 Top3: 61.2731530764 Top5: - 
+################
+
+Epoch: 15  Train Loss: 0.239126133698
+###############
+All videos all classes       : Top1: 68.9084395266 Top2: 75.0306108567 Top3: 76.6269103442 Top5: 77.6654119995
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.4223972749 Top2: 46.6893761976 Top3: 60.7834788163 Top5: - 
+################
+
+Epoch: 16  Train Loss: 0.236039265273
+###############
+All videos all classes       : Top1: 69.0580926035 Top2: 75.0532855653 Top3: 76.6450501111 Top5: 77.6790168246
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.8907813498 Top2: 46.7106663828 Top3: 60.4854162231 Top5: - 
+################
+
+Epoch: 17  Train Loss: 0.233367815724
+###############
+All videos all classes       : Top1: 68.9537889438 Top2: 75.0850301574 Top3: 76.6495850528 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.912071535 Top2: 47.1790504577 Top3: 60.6557377049 Top5: - 
+################
+
+Epoch: 18  Train Loss: 0.230864413138
+###############
+All videos all classes       : Top1: 68.9809985942 Top2: 75.107704866 Top3: 76.6994694118 Top5: 77.6744818829
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.720459868 Top2: 46.8171173089 Top3: 60.6344475197 Top5: - 
+################
+
+Epoch: 19  Train Loss: 0.228626871054
+###############
+All videos all classes       : Top1: 69.1170468459 Top2: 75.0895650991 Top3: 76.713074237 Top5: 77.6880867081
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.4862678305 Top2: 46.6893761976 Top3: 60.4428358527 Top5: - 
+################
+
+Epoch: 20  Train Loss: 0.226344913989
+###############
+All videos all classes       : Top1: 69.1623962632 Top2: 75.1213096912 Top3: 76.6767947032 Top5: 77.6608770577
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.8482009793 Top2: 46.5190547158 Top3: 60.2086438152 Top5: - 
+################
+
+Epoch: 21  Train Loss: 0.224493832003
+###############
+All videos all classes       : Top1: 69.1079769625 Top2: 75.1303795746 Top3: 76.6586549363 Top5: 77.6880867081
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5714285714 Top2: 46.4977645306 Top3: 60.9750904833 Top5: - 
+################
+
+Epoch: 22  Train Loss: 0.222619003941
+###############
+All videos all classes       : Top1: 69.1896059136 Top2: 75.1122398077 Top3: 76.6677248197 Top5: 77.6790168246
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.0611028316 Top2: 46.731956568 Top3: 60.2512241857 Top5: - 
+################
+
+Epoch: 23  Train Loss: 0.220901440912
+###############
+All videos all classes       : Top1: 69.2440252143 Top2: 75.1394494581 Top3: 76.6949344701 Top5: 77.6608770577
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5927187567 Top2: 46.3274430488 Top3: 60.6770278901 Top5: - 
+################
+
+Epoch: 24  Train Loss: 0.219297541899
+###############
+All videos all classes       : Top1: 69.1623962632 Top2: 75.2029386422 Top3: 76.7402838874 Top5: 77.6608770577
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.7843304237 Top2: 46.3061528635 Top3: 60.8047690015 Top5: - 
+################
+
+Epoch: 25  Train Loss: 0.217795173824
+###############
+All videos all classes       : Top1: 69.2530950977 Top2: 75.2029386422 Top3: 76.7266790622 Top5: 77.6880867081
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.720459868 Top2: 46.8596976794 Top3: 60.5918671492 Top5: - 
+################
+
+Epoch: 26  Train Loss: 0.21626103399
+###############
+All videos all classes       : Top1: 69.3165842819 Top2: 75.1893338171 Top3: 76.7176091787 Top5: 77.6744818829
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.9978709815 Top2: 47.39195231 Top3: 59.9318714073 Top5: - 
+################
+
+Epoch: 27  Train Loss: 0.215055130864
+###############
+All videos all classes       : Top1: 69.3075143984 Top2: 75.239218176 Top3: 76.7040043535 Top5: 77.6427372908
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1669150522 Top2: 45.9229295295 Top3: 61.1667021503 Top5: - 
+################
+
+Epoch: 28  Train Loss: 0.213606048348
+###############
+All videos all classes       : Top1: 69.298444515 Top2: 75.1847988753 Top3: 76.7448188291 Top5: 77.6835517664
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.6565893123 Top2: 46.4551841601 Top3: 60.3150947413 Top5: - 
+################
+
+Epoch: 29  Train Loss: 0.212548612113
+###############
+All videos all classes       : Top1: 69.3211192236 Top2: 75.1893338171 Top3: 76.7357489456 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.5081967213 Top2: 46.9448584203 Top3: 60.0596125186 Top5: - 
+################
+
+Epoch: 30  Train Loss: 0.211311411057
+###############
+All videos all classes       : Top1: 69.3528638157 Top2: 75.1711940502 Top3: 76.7266790622 Top5: 77.6880867081
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.7423887588 Top2: 46.9874387907 Top3: 60.2938045561 Top5: - 
+################
+
+Epoch: 31  Train Loss: 0.210189276271
+###############
+All videos all classes       : Top1: 69.3256541653 Top2: 75.2618928847 Top3: 76.7584236543 Top5: 77.6835517664
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.5081967213 Top2: 46.9874387907 Top3: 60.1447732595 Top5: - 
+################
+
+Epoch: 32  Train Loss: 0.209135733159
+###############
+All videos all classes       : Top1: 69.3755385243 Top2: 75.2754977099 Top3: 76.7584236543 Top5: 77.6790168246
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.6146476474 Top2: 46.9448584203 Top3: 60.2725143709 Top5: - 
+################
+
+Epoch: 33  Train Loss: 0.208096075472
+###############
+All videos all classes       : Top1: 69.3437939322 Top2: 75.2437531178 Top3: 76.7810983629 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2733659783 Top2: 46.6893761976 Top3: 60.6983180754 Top5: - 
+################
+
+Epoch: 34  Train Loss: 0.207205864428
+###############
+All videos all classes       : Top1: 69.3710035826 Top2: 75.2845675933 Top3: 76.7538887125 Top5: 77.706226475
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2740046838 Top2: 46.7958271237 Top3: 60.4854162231 Top5: - 
+################
+
+Epoch: 35  Train Loss: 0.206266635049
+###############
+All videos all classes       : Top1: 69.348328874 Top2: 75.2528230012 Top3: 76.7176091787 Top5: 77.6699469412
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2314243134 Top2: 46.5616350862 Top3: 60.762188631 Top5: - 
+################
+
+Epoch: 36  Train Loss: 0.205384378797
+###############
+All videos all classes       : Top1: 69.4027481747 Top2: 75.2528230012 Top3: 76.7493537708 Top5: 77.6790168246
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2101341282 Top2: 46.7106663828 Top3: 60.3576751118 Top5: - 
+################
+
+Epoch: 37  Train Loss: 0.204501782661
+###############
+All videos all classes       : Top1: 69.429957825 Top2: 75.2618928847 Top3: 76.7312140039 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.5081967213 Top2: 47.0300191612 Top3: 60.2299340004 Top5: - 
+################
+
+Epoch: 38  Train Loss: 0.203758002266
+###############
+All videos all classes       : Top1: 69.4390277085 Top2: 75.2709627681 Top3: 76.7765634212 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.38045561 Top2: 47.0300191612 Top3: 60.5067064083 Top5: - 
+################
+
+Epoch: 39  Train Loss: 0.202943286024
+###############
+All videos all classes       : Top1: 69.4118180581 Top2: 75.3117772437 Top3: 76.7810983629 Top5: 77.6699469412
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2314243134 Top2: 46.8384074941 Top3: 60.762188631 Top5: - 
+################
+
+Epoch: 40  Train Loss: 0.202206719529
+###############
+All videos all classes       : Top1: 69.4617024171 Top2: 75.2528230012 Top3: 76.7856333046 Top5: 77.6971565915
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5927187567 Top2: 46.5616350862 Top3: 61.1454119651 Top5: - 
+################
+
+Epoch: 41  Train Loss: 0.201526167768
+###############
+All videos all classes       : Top1: 69.5433313682 Top2: 75.2936374768 Top3: 76.7901682463 Top5: 77.7152963584
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2101341282 Top2: 46.6255056419 Top3: 60.6770278901 Top5: - 
+################
+
+Epoch: 42  Train Loss: 0.200696922811
+###############
+All videos all classes       : Top1: 69.479842184 Top2: 75.3163121854 Top3: 76.7856333046 Top5: 77.7152963584
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2314243134 Top2: 46.7532467532 Top3: 60.2938045561 Top5: - 
+################
+
+Epoch: 43  Train Loss: 0.200031511182
+###############
+All videos all classes       : Top1: 69.4979819509 Top2: 75.2800326516 Top3: 76.8037730715 Top5: 77.7107614167
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.7210985736 Top2: 47.0087289759 Top3: 60.3576751118 Top5: - 
+################
+
+Epoch: 44  Train Loss: 0.199383492464
+###############
+All videos all classes       : Top1: 69.4662373588 Top2: 75.3208471271 Top3: 76.7810983629 Top5: 77.6926216498
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.6998083883 Top2: 47.0300191612 Top3: 60.6344475197 Top5: - 
+################
+
+Epoch: 45  Train Loss: 0.198788280454
+###############
+All videos all classes       : Top1: 69.5614711351 Top2: 75.2482880595 Top3: 76.7720284794 Top5: 77.706226475
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2307856078 Top2: 46.157121567 Top3: 61.2092825208 Top5: - 
+################
+
+Epoch: 46  Train Loss: 0.1982253993
+###############
+All videos all classes       : Top1: 69.5524012516 Top2: 75.3571266609 Top3: 76.7901682463 Top5: 77.7107614167
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.912071535 Top2: 46.6893761976 Top3: 60.762188631 Top5: - 
+################
+
+Epoch: 47  Train Loss: 0.197648464695
+###############
+All videos all classes       : Top1: 69.5115867761 Top2: 75.3208471271 Top3: 76.7810983629 Top5: 77.706226475
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.8275494997 Top2: 47.3067915691 Top3: 60.2938045561 Top5: - 
+################
+
+Epoch: 48  Train Loss: 0.197073173937
+###############
+All videos all classes       : Top1: 69.5070518344 Top2: 75.3208471271 Top3: 76.7992381298 Top5: 77.706226475
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.8694911646 Top2: 46.6042154567 Top3: 60.5492867788 Top5: - 
+################
+
+Epoch: 49  Train Loss: 0.19654221187
+###############
+All videos all classes       : Top1: 69.5524012516 Top2: 75.3208471271 Top3: 76.7992381298 Top5: 77.7152963584
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.4436874601 Top2: 46.3274430488 Top3: 61.1454119651 Top5: - 
+################
+
+Epoch: 50  Train Loss: 0.195861345281
+###############
+All videos all classes       : Top1: 69.5433313682 Top2: 75.3661965444 Top3: 76.7810983629 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.2527144986 Top2: 46.9448584203 Top3: 60.5492867788 Top5: - 
+################
+
+Epoch: 51  Train Loss: 0.195401252365
+###############
+All videos all classes       : Top1: 69.5478663099 Top2: 75.3435218357 Top3: 76.8173778967 Top5: 77.7198313002
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.7630402385 Top2: 46.5190547158 Top3: 61.3370236321 Top5: - 
+################
+
+Epoch: 52  Train Loss: 0.194908658912
+###############
+All videos all classes       : Top1: 69.5478663099 Top2: 75.3344519523 Top3: 76.8083080132 Top5: 77.7334361253
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.7630402385 Top2: 46.731956568 Top3: 61.0602512242 Top5: - 
+################
+
+Epoch: 53  Train Loss: 0.194353336206
+###############
+All videos all classes       : Top1: 69.5660060768 Top2: 75.3299170106 Top3: 76.7901682463 Top5: 77.7107614167
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 29.0611028316 Top2: 46.7958271237 Top3: 60.762188631 Top5: - 
+################
+
+Epoch: 54  Train Loss: 0.193911097419
+###############
+All videos all classes       : Top1: 69.5342614847 Top2: 75.3253820688 Top3: 76.7810983629 Top5: 77.706226475
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5075580158 Top2: 46.4126037897 Top3: 61.0602512242 Top5: - 
+################
+
+Epoch: 55  Train Loss: 0.193682281618
+###############
+All videos all classes       : Top1: 69.6703097365 Top2: 75.3208471271 Top3: 76.812842955 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9965935704 Top2: 45.9016393443 Top3: 61.4434745582 Top5: - 
+################
+
+Epoch: 56  Train Loss: 0.19305624581
+###############
+All videos all classes       : Top1: 69.5841458437 Top2: 75.3616616026 Top3: 76.8083080132 Top5: 77.7379710671
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2946561635 Top2: 46.2422823079 Top3: 61.2092825208 Top5: - 
+################
+
+Epoch: 57  Train Loss: 0.192471500734
+###############
+All videos all classes       : Top1: 69.5705410185 Top2: 75.3435218357 Top3: 76.8083080132 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9753033851 Top2: 46.0293804556 Top3: 61.4434745582 Top5: - 
+################
+
+Epoch: 58  Train Loss: 0.192058097544
+###############
+All videos all classes       : Top1: 69.5705410185 Top2: 75.3163121854 Top3: 76.7765634212 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.3798169044 Top2: 46.2848626783 Top3: 61.1667021503 Top5: - 
+################
+
+Epoch: 59  Train Loss: 0.19173789659
+###############
+All videos all classes       : Top1: 69.6748446782 Top2: 75.3616616026 Top3: 76.7856333046 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.9546519055 Top2: 46.7958271237 Top3: 60.7834788163 Top5: - 
+################
+
+Epoch: 60  Train Loss: 0.191332070888
+###############
+All videos all classes       : Top1: 69.6158904358 Top2: 75.3435218357 Top3: 76.7810983629 Top5: 77.7016915333
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.3798169044 Top2: 46.2635724931 Top3: 61.3583138173 Top5: - 
+################
+
+Epoch: 61  Train Loss: 0.190854768358
+###############
+All videos all classes       : Top1: 69.579610902 Top2: 75.3435218357 Top3: 76.7992381298 Top5: 77.7107614167
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6559506068 Top2: 45.5822865659 Top3: 61.9970193741 Top5: - 
+################
+
+Epoch: 62  Train Loss: 0.190485560839
+###############
+All videos all classes       : Top1: 69.6431000862 Top2: 75.3253820688 Top3: 76.812842955 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9965935704 Top2: 46.1145411965 Top3: 61.6350862253 Top5: - 
+################
+
+Epoch: 63  Train Loss: 0.190108701614
+###############
+All videos all classes       : Top1: 69.6748446782 Top2: 75.3707314861 Top3: 76.812842955 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 45.8590589738 Top3: 61.9118586332 Top5: - 
+################
+
+Epoch: 64  Train Loss: 0.18969310558
+###############
+All videos all classes       : Top1: 69.6703097365 Top2: 75.3707314861 Top3: 76.7947031881 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 45.9229295295 Top3: 61.9544390036 Top5: - 
+################
+
+Epoch: 65  Train Loss: 0.189334253815
+###############
+All videos all classes       : Top1: 69.6068205524 Top2: 75.3435218357 Top3: 76.8219128384 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.337236534 Top2: 46.1784117522 Top3: 61.2092825208 Top5: - 
+################
+
+Epoch: 66  Train Loss: 0.188946931202
+###############
+All videos all classes       : Top1: 69.6022856106 Top2: 75.3707314861 Top3: 76.7992381298 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 45.9868000852 Top3: 61.9544390036 Top5: - 
+################
+
+Epoch: 67  Train Loss: 0.188604365938
+###############
+All videos all classes       : Top1: 69.5977506689 Top2: 75.338986894 Top3: 76.8083080132 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5920800511 Top2: 45.9655098999 Top3: 62.0183095593 Top5: - 
+################
+
+Epoch: 68  Train Loss: 0.188311992503
+###############
+All videos all classes       : Top1: 69.6839145617 Top2: 75.3752664278 Top3: 76.8173778967 Top5: 77.7425060088
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.4332552693 Top3: 62.4866936342 Top5: - 
+################
+
+Epoch: 69  Train Loss: 0.187906514274
+###############
+All videos all classes       : Top1: 69.6703097365 Top2: 75.3616616026 Top3: 76.7992381298 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.634021716 Top2: 45.3693847136 Top3: 63.0189482648 Top5: - 
+################
+
+Epoch: 70  Train Loss: 0.187647208089
+###############
+All videos all classes       : Top1: 69.6340302027 Top2: 75.3934061947 Top3: 76.7992381298 Top5: 77.7243662419
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7411113477 Top2: 46.0080902704 Top3: 61.9544390036 Top5: - 
+################
+
+Epoch: 71  Train Loss: 0.187308991328
+###############
+All videos all classes       : Top1: 69.6929844451 Top2: 75.3661965444 Top3: 76.8083080132 Top5: 77.7334361253
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.2727272727 Top2: 45.2416436023 Top3: 62.5931445604 Top5: - 
+################
+
+Epoch: 72  Train Loss: 0.187017985006
+###############
+All videos all classes       : Top1: 69.6839145617 Top2: 75.388871253 Top3: 76.7992381298 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7411113477 Top2: 45.6461571216 Top3: 62.1886310411 Top5: - 
+################
+
+Epoch: 73  Train Loss: 0.186643873128
+###############
+All videos all classes       : Top1: 69.6657747948 Top2: 75.338986894 Top3: 76.8309827219 Top5: 77.7289011836
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5707898659 Top2: 45.7951884181 Top3: 62.4866936342 Top5: - 
+################
+
+Epoch: 74  Train Loss: 0.186375913272
+###############
+All videos all classes       : Top1: 69.6929844451 Top2: 75.338986894 Top3: 76.8355176636 Top5: 77.7334361253
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4430487545 Top2: 45.3906748989 Top3: 62.5931445604 Top5: - 
+################
+
+Epoch: 75  Train Loss: 0.186131911808
+###############
+All videos all classes       : Top1: 69.7247290372 Top2: 75.3752664278 Top3: 76.8445875471 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1882052374 Top2: 46.0293804556 Top3: 61.7202469661 Top5: - 
+################
+
+Epoch: 76  Train Loss: 0.185846320429
+###############
+All videos all classes       : Top1: 69.729263979 Top2: 75.3571266609 Top3: 76.8173778967 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2733659783 Top2: 46.1997019374 Top3: 61.4434745582 Top5: - 
+################
+
+Epoch: 77  Train Loss: 0.185484244495
+###############
+All videos all classes       : Top1: 69.7474037459 Top2: 75.3979411365 Top3: 76.8400526053 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9114328295 Top2: 45.7951884181 Top3: 62.1034703002 Top5: - 
+################
+
+Epoch: 78  Train Loss: 0.185242182554
+###############
+All videos all classes       : Top1: 69.7201940955 Top2: 75.388871253 Top3: 76.8264477801 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3578880136 Top2: 45.6461571216 Top3: 62.6357249308 Top5: - 
+################
+
+Epoch: 79  Train Loss: 0.184969995681
+###############
+All videos all classes       : Top1: 69.67937962 Top2: 75.3344519523 Top3: 76.8083080132 Top5: 77.7379710671
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4004683841 Top2: 45.7951884181 Top3: 62.4866936342 Top5: - 
+################
+
+Epoch: 80  Train Loss: 0.184672671722
+###############
+All videos all classes       : Top1: 69.6839145617 Top2: 75.3798013696 Top3: 76.8355176636 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4430487545 Top2: 45.4332552693 Top3: 62.657015116 Top5: - 
+################
+
+Epoch: 81  Train Loss: 0.184438566298
+###############
+All videos all classes       : Top1: 69.6340302027 Top2: 75.3616616026 Top3: 76.8491224888 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5707898659 Top2: 45.6461571216 Top3: 62.657015116 Top5: - 
+################
+
+Epoch: 82  Train Loss: 0.184233747795
+###############
+All videos all classes       : Top1: 69.579610902 Top2: 75.3480567775 Top3: 76.8219128384 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.5397061954 Top3: 62.7208856717 Top5: - 
+################
+
+Epoch: 83  Train Loss: 0.18390485625
+###############
+All videos all classes       : Top1: 69.6884495034 Top2: 75.4342206703 Top3: 76.812842955 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.5062806046 Top2: 45.1564828614 Top3: 63.0402384501 Top5: - 
+################
+
+Epoch: 84  Train Loss: 0.18367744876
+###############
+All videos all classes       : Top1: 69.7564736293 Top2: 75.3843363113 Top3: 76.8264477801 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4217585693 Top2: 45.5397061954 Top3: 62.6144347456 Top5: - 
+################
+
+Epoch: 85  Train Loss: 0.183453877353
+###############
+All videos all classes       : Top1: 69.7519386876 Top2: 75.3798013696 Top3: 76.8400526053 Top5: 77.7379710671
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6346604215 Top2: 45.7313178625 Top3: 62.3802427081 Top5: - 
+################
+
+Epoch: 86  Train Loss: 0.183199910971
+###############
+All videos all classes       : Top1: 69.7337989207 Top2: 75.3752664278 Top3: 76.8400526053 Top5: 77.7425060088
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.485629125 Top2: 45.5609963807 Top3: 62.5718543751 Top5: - 
+################
+
+Epoch: 87  Train Loss: 0.182875291024
+###############
+All videos all classes       : Top1: 69.7882182214 Top2: 75.4070110199 Top3: 76.8309827219 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.7191824569 Top2: 45.2629337875 Top3: 63.2531403023 Top5: - 
+################
+
+Epoch: 88  Train Loss: 0.182641965385
+###############
+All videos all classes       : Top1: 69.7383338624 Top2: 75.3843363113 Top3: 76.8309827219 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.2088567171 Top2: 45.5609963807 Top3: 62.7208856717 Top5: - 
+################
+
+Epoch: 89  Train Loss: 0.182441444157
+###############
+All videos all classes       : Top1: 69.7247290372 Top2: 75.4251507868 Top3: 76.8173778967 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.8043431978 Top2: 45.3906748989 Top3: 62.9124973387 Top5: - 
+################
+
+Epoch: 90  Train Loss: 0.182228738939
+###############
+All videos all classes       : Top1: 69.7065892703 Top2: 75.3661965444 Top3: 76.8083080132 Top5: 77.7470409505
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.442410049 Top2: 45.0500319353 Top3: 63.4873323398 Top5: - 
+################
+
+Epoch: 91  Train Loss: 0.182012769966
+###############
+All videos all classes       : Top1: 69.7564736293 Top2: 75.3798013696 Top3: 76.8173778967 Top5: 77.7425060088
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3365978284 Top2: 45.7313178625 Top3: 62.8060464126 Top5: - 
+################
+
+Epoch: 92  Train Loss: 0.18171969517
+###############
+All videos all classes       : Top1: 69.6884495034 Top2: 75.3843363113 Top3: 76.8400526053 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 46.3274430488 Top3: 62.1673408559 Top5: - 
+################
+
+Epoch: 93  Train Loss: 0.181508044899
+###############
+All videos all classes       : Top1: 69.7836832797 Top2: 75.3752664278 Top3: 76.8491224888 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.5275707899 Top2: 45.305514158 Top3: 63.4660421546 Top5: - 
+################
+
+Epoch: 94  Train Loss: 0.181290327923
+###############
+All videos all classes       : Top1: 69.7791483379 Top2: 75.3661965444 Top3: 76.8400526053 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0391739408 Top2: 46.0932510113 Top3: 62.1673408559 Top5: - 
+################
+
+Epoch: 95  Train Loss: 0.181055233959
+###############
+All videos all classes       : Top1: 69.8244977552 Top2: 75.388871253 Top3: 76.8309827219 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.1662763466 Top2: 45.5184160102 Top3: 63.1041090057 Top5: - 
+################
+
+Epoch: 96  Train Loss: 0.180915861287
+###############
+All videos all classes       : Top1: 69.7111242121 Top2: 75.4024760782 Top3: 76.8491224888 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9114328295 Top2: 45.9016393443 Top3: 62.6995954865 Top5: - 
+################
+
+Epoch: 97  Train Loss: 0.180659493763
+###############
+All videos all classes       : Top1: 69.7836832797 Top2: 75.3979411365 Top3: 76.8445875471 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.8590589738 Top3: 62.9976580796 Top5: - 
+################
+
+Epoch: 98  Train Loss: 0.180435741113
+###############
+All videos all classes       : Top1: 69.7156591538 Top2: 75.438755612 Top3: 76.8219128384 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.1449861614 Top2: 45.5822865659 Top3: 63.0402384501 Top5: - 
+################
+
+Epoch: 99  Train Loss: 0.180207852619
+###############
+All videos all classes       : Top1: 69.81089293 Top2: 75.4251507868 Top3: 76.8264477801 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.7404726421 Top2: 45.3268043432 Top3: 63.2531403023 Top5: - 
+################
+
+Epoch: 100  Train Loss: 0.180113437703
+###############
+All videos all classes       : Top1: 69.7700784545 Top2: 75.4115459616 Top3: 76.8309827219 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.9107941239 Top2: 45.5609963807 Top3: 63.1041090057 Top5: - 
+################
+
+Epoch: 101  Train Loss: 0.179900174974
+###############
+All videos all classes       : Top1: 69.761008571 Top2: 75.4432905537 Top3: 76.8264477801 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 26.9320843091 Top2: 45.4332552693 Top3: 63.3808814137 Top5: - 
+################
+
+Epoch: 102  Train Loss: 0.179675385328
+###############
+All videos all classes       : Top1: 69.7927531631 Top2: 75.3798013696 Top3: 76.8309827219 Top5: 77.756110834
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.485629125 Top2: 45.8377687886 Top3: 62.9763678944 Top5: - 
+################
+
+Epoch: 103  Train Loss: 0.179496339929
+###############
+All videos all classes       : Top1: 69.7383338624 Top2: 75.388871253 Top3: 76.8445875471 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 45.7951884181 Top3: 62.6783053013 Top5: - 
+################
+
+Epoch: 104  Train Loss: 0.179328610955
+###############
+All videos all classes       : Top1: 69.8562423473 Top2: 75.4296857285 Top3: 76.8355176636 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.8164786034 Top3: 62.9124973387 Top5: - 
+################
+
+Epoch: 105  Train Loss: 0.179144392797
+###############
+All videos all classes       : Top1: 69.7655435128 Top2: 75.438755612 Top3: 76.8219128384 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.2301469023 Top2: 45.8590589738 Top3: 63.0402384501 Top5: - 
+################
+
+Epoch: 106  Train Loss: 0.178973244503
+###############
+All videos all classes       : Top1: 69.7972881048 Top2: 75.4342206703 Top3: 76.8309827219 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6346604215 Top2: 45.9442197147 Top3: 62.8060464126 Top5: - 
+################
+
+Epoch: 107  Train Loss: 0.178732827361
+###############
+All videos all classes       : Top1: 69.8244977552 Top2: 75.438755612 Top3: 76.8445875471 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1456248669 Top2: 46.4977645306 Top3: 62.0183095593 Top5: - 
+################
+
+Epoch: 108  Train Loss: 0.178592552755
+###############
+All videos all classes       : Top1: 69.8517074056 Top2: 75.3979411365 Top3: 76.8219128384 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9965935704 Top2: 46.3061528635 Top3: 62.3163721524 Top5: - 
+################
+
+Epoch: 109  Train Loss: 0.178366265874
+###############
+All videos all classes       : Top1: 69.7882182214 Top2: 75.4070110199 Top3: 76.8491224888 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 46.0080902704 Top3: 62.6995954865 Top5: - 
+################
+
+Epoch: 110  Train Loss: 0.178371821385
+###############
+All videos all classes       : Top1: 69.7836832797 Top2: 75.4115459616 Top3: 76.8355176636 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1456248669 Top2: 46.4126037897 Top3: 62.2312114115 Top5: - 
+################
+
+Epoch: 111  Train Loss: 0.178041431942
+###############
+All videos all classes       : Top1: 69.7972881048 Top2: 75.3798013696 Top3: 76.8491224888 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4004683841 Top2: 46.0293804556 Top3: 62.933787524 Top5: - 
+################
+
+Epoch: 112  Train Loss: 0.177964702759
+###############
+All videos all classes       : Top1: 69.8244977552 Top2: 75.4206158451 Top3: 76.8309827219 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4217585693 Top2: 45.9868000852 Top3: 62.8273365978 Top5: - 
+################
+
+Epoch: 113  Train Loss: 0.177691761473
+###############
+All videos all classes       : Top1: 69.8426375221 Top2: 75.4160809034 Top3: 76.8264477801 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9965935704 Top2: 46.3274430488 Top3: 62.4441132638 Top5: - 
+################
+
+Epoch: 114  Train Loss: 0.177626626456
+###############
+All videos all classes       : Top1: 69.8925218811 Top2: 75.4206158451 Top3: 76.8309827219 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.9229295295 Top3: 62.9550777092 Top5: - 
+################
+
+Epoch: 115  Train Loss: 0.177416823984
+###############
+All videos all classes       : Top1: 69.8653122307 Top2: 75.4160809034 Top3: 76.8264477801 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4004683841 Top2: 46.1358313817 Top3: 62.8699169683 Top5: - 
+################
+
+Epoch: 116  Train Loss: 0.177222280232
+###############
+All videos all classes       : Top1: 69.8970568228 Top2: 75.4568953789 Top3: 76.8400526053 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5494996806 Top2: 45.9016393443 Top3: 62.8273365978 Top5: - 
+################
+
+Epoch: 117  Train Loss: 0.177143715101
+###############
+All videos all classes       : Top1: 69.8335676387 Top2: 75.4705002041 Top3: 76.8491224888 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7624015329 Top2: 46.1358313817 Top3: 62.7847562274 Top5: - 
+################
+
+Epoch: 118  Train Loss: 0.176947130111
+###############
+All videos all classes       : Top1: 69.8517074056 Top2: 75.388871253 Top3: 76.8581923722 Top5: 77.7606457757
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6985309772 Top2: 46.1784117522 Top3: 62.8486267831 Top5: - 
+################
+
+Epoch: 119  Train Loss: 0.17680267108
+###############
+All videos all classes       : Top1: 69.8381025804 Top2: 75.438755612 Top3: 76.8309827219 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8475622738 Top2: 46.1358313817 Top3: 62.4228230786 Top5: - 
+################
+
+Epoch: 120  Train Loss: 0.176597817849
+###############
+All videos all classes       : Top1: 69.8970568228 Top2: 75.4478254954 Top3: 76.8400526053 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8049819033 Top2: 46.2422823079 Top3: 62.5718543751 Top5: - 
+################
+
+Epoch: 121  Train Loss: 0.176523007715
+###############
+All videos all classes       : Top1: 69.8653122307 Top2: 75.4251507868 Top3: 76.8672622557 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6559506068 Top2: 46.0293804556 Top3: 62.7847562274 Top5: - 
+################
+
+Epoch: 122  Train Loss: 0.17632759695
+###############
+All videos all classes       : Top1: 69.8199628135 Top2: 75.4115459616 Top3: 76.8445875471 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7836917181 Top2: 46.0719608261 Top3: 62.8273365978 Top5: - 
+################
+
+Epoch: 123  Train Loss: 0.176222288181
+###############
+All videos all classes       : Top1: 69.8970568228 Top2: 75.4115459616 Top3: 76.8581923722 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1243346817 Top2: 46.2422823079 Top3: 62.4866936342 Top5: - 
+################
+
+Epoch: 124  Train Loss: 0.176131355928
+###############
+All videos all classes       : Top1: 69.8018230466 Top2: 75.4614303206 Top3: 76.8491224888 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2946561635 Top2: 46.6042154567 Top3: 62.3163721524 Top5: - 
+################
+
+Epoch: 125  Train Loss: 0.175874009259
+###############
+All videos all classes       : Top1: 69.8562423473 Top2: 75.4523604372 Top3: 76.8309827219 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2733659783 Top2: 46.6680860123 Top3: 62.3163721524 Top5: - 
+################
+
+Epoch: 126  Train Loss: 0.175786738387
+###############
+All videos all classes       : Top1: 69.9151965897 Top2: 75.4568953789 Top3: 76.8491224888 Top5: 77.7515758922
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5494996806 Top2: 46.0080902704 Top3: 62.8060464126 Top5: - 
+################
+
+Epoch: 127  Train Loss: 0.175638497704
+###############
+All videos all classes       : Top1: 69.8970568228 Top2: 75.4160809034 Top3: 76.8581923722 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7836917181 Top2: 46.1997019374 Top3: 62.6995954865 Top5: - 
+################
+
+Epoch: 128  Train Loss: 0.175515474213
+###############
+All videos all classes       : Top1: 69.8698471725 Top2: 75.4296857285 Top3: 76.8536574305 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2520757931 Top2: 46.7958271237 Top3: 62.273791782 Top5: - 
+################
+
+Epoch: 129  Train Loss: 0.175321378628
+###############
+All videos all classes       : Top1: 69.8471724638 Top2: 75.4296857285 Top3: 76.8536574305 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3791781989 Top2: 45.9016393443 Top3: 63.1679795614 Top5: - 
+################
+
+Epoch: 130  Train Loss: 0.175162884869
+###############
+All videos all classes       : Top1: 69.9242664732 Top2: 75.438755612 Top3: 76.8400526053 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8262720886 Top2: 46.1358313817 Top3: 62.8486267831 Top5: - 
+################
+
+Epoch: 131  Train Loss: 0.175099460767
+###############
+All videos all classes       : Top1: 69.8562423473 Top2: 75.4523604372 Top3: 76.8536574305 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9327230147 Top2: 46.4764743453 Top3: 62.8273365978 Top5: - 
+################
+
+Epoch: 132  Train Loss: 0.174916211336
+###############
+All videos all classes       : Top1: 69.8290326969 Top2: 75.4478254954 Top3: 76.8672622557 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2307856078 Top2: 46.4126037897 Top3: 62.5292740047 Top5: - 
+################
+
+Epoch: 133  Train Loss: 0.174759418407
+###############
+All videos all classes       : Top1: 69.9378712984 Top2: 75.4568953789 Top3: 76.8491224888 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6559506068 Top2: 46.2209921226 Top3: 62.9124973387 Top5: - 
+################
+
+Epoch: 134  Train Loss: 0.174689913141
+###############
+All videos all classes       : Top1: 69.8925218811 Top2: 75.4024760782 Top3: 76.8763321391 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0178837556 Top2: 46.4764743453 Top3: 62.657015116 Top5: - 
+################
+
+Epoch: 135  Train Loss: 0.174568680039
+###############
+All videos all classes       : Top1: 69.9197315314 Top2: 75.4024760782 Top3: 76.8581923722 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1882052374 Top2: 46.8809878646 Top3: 62.5718543751 Top5: - 
+################
+
+Epoch: 136  Train Loss: 0.174555913607
+###############
+All videos all classes       : Top1: 69.8970568228 Top2: 75.488639971 Top3: 76.8536574305 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2946561635 Top2: 46.6255056419 Top3: 62.465403449 Top5: - 
+################
+
+Epoch: 137  Train Loss: 0.174339679228
+###############
+All videos all classes       : Top1: 69.860777289 Top2: 75.4478254954 Top3: 76.8445875471 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7624015329 Top2: 46.1784117522 Top3: 63.1466893762 Top5: - 
+################
+
+Epoch: 138  Train Loss: 0.174250035595
+###############
+All videos all classes       : Top1: 69.8789170559 Top2: 75.4523604372 Top3: 76.862727314 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.5707898659 Top2: 46.1784117522 Top3: 63.0189482648 Top5: - 
+################
+
+Epoch: 139  Train Loss: 0.174051952514
+###############
+All videos all classes       : Top1: 69.9151965897 Top2: 75.438755612 Top3: 76.8763321391 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0391739408 Top2: 46.6467958271 Top3: 62.6783053013 Top5: - 
+################
+
+Epoch: 140  Train Loss: 0.173934922767
+###############
+All videos all classes       : Top1: 69.9197315314 Top2: 75.4568953789 Top3: 76.8581923722 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9753033851 Top2: 46.3700234192 Top3: 62.6144347456 Top5: - 
+################
+
+Epoch: 141  Train Loss: 0.173792572209
+###############
+All videos all classes       : Top1: 69.9015917645 Top2: 75.4342206703 Top3: 76.8763321391 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.485629125 Top2: 46.1997019374 Top3: 62.9763678944 Top5: - 
+################
+
+Epoch: 142  Train Loss: 0.173682282037
+###############
+All videos all classes       : Top1: 69.9242664732 Top2: 75.4432905537 Top3: 76.8581923722 Top5: 77.7969253095
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0391739408 Top2: 46.6680860123 Top3: 62.6144347456 Top5: - 
+################
+
+Epoch: 143  Train Loss: 0.173524539559
+###############
+All videos all classes       : Top1: 69.9378712984 Top2: 75.4568953789 Top3: 76.8491224888 Top5: 77.7697156592
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 46.6467958271 Top3: 62.7421758569 Top5: - 
+################
+
+Epoch: 144  Train Loss: 0.173476399026
+###############
+All videos all classes       : Top1: 69.9197315314 Top2: 75.4795700875 Top3: 76.862727314 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9327230147 Top2: 46.1784117522 Top3: 62.9124973387 Top5: - 
+################
+
+Epoch: 145  Train Loss: 0.173392621524
+###############
+All videos all classes       : Top1: 69.9242664732 Top2: 75.4478254954 Top3: 76.8491224888 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.5075580158 Top2: 46.923568235 Top3: 62.3589525229 Top5: - 
+################
+
+Epoch: 146  Train Loss: 0.173189541242
+###############
+All videos all classes       : Top1: 69.9333363566 Top2: 75.4568953789 Top3: 76.862727314 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8901426442 Top2: 46.1358313817 Top3: 62.7847562274 Top5: - 
+################
+
+Epoch: 147  Train Loss: 0.173127889909
+###############
+All videos all classes       : Top1: 69.9560110653 Top2: 75.4160809034 Top3: 76.8491224888 Top5: 77.7742506009
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.7417500532 Top2: 46.9874387907 Top3: 62.3376623377 Top5: - 
+################
+
+Epoch: 148  Train Loss: 0.173051718774
+###############
+All videos all classes       : Top1: 70.0058954242 Top2: 75.4659652623 Top3: 76.8854020226 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8262720886 Top2: 46.157121567 Top3: 62.8912071535 Top5: - 
+################
+
+Epoch: 149  Train Loss: 0.172949249987
+###############
+All videos all classes       : Top1: 69.9560110653 Top2: 75.4251507868 Top3: 76.8808670809 Top5: 77.7969253095
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1882052374 Top2: 46.5616350862 Top3: 62.6995954865 Top5: - 
+################
+
+Epoch: 150  Train Loss: 0.172780007703
+###############
+All videos all classes       : Top1: 69.9650809487 Top2: 75.4568953789 Top3: 76.8808670809 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2094954226 Top2: 46.5829252714 Top3: 62.6783053013 Top5: - 
+################
+
+Epoch: 151  Train Loss: 0.172835899503
+###############
+All videos all classes       : Top1: 69.9514761235 Top2: 75.4432905537 Top3: 76.862727314 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0178837556 Top2: 46.1997019374 Top3: 62.9124973387 Top5: - 
+################
+
+Epoch: 152  Train Loss: 0.172592458143
+###############
+All videos all classes       : Top1: 69.9242664732 Top2: 75.4705002041 Top3: 76.8763321391 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.8056206089 Top2: 46.7532467532 Top3: 62.3376623377 Top5: - 
+################
+
+Epoch: 153  Train Loss: 0.172494831943
+###############
+All videos all classes       : Top1: 69.9741508322 Top2: 75.4841050293 Top3: 76.862727314 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9965935704 Top2: 46.540344901 Top3: 62.7421758569 Top5: - 
+################
+
+Epoch: 154  Train Loss: 0.172355627351
+###############
+All videos all classes       : Top1: 69.9015917645 Top2: 75.4342206703 Top3: 76.8808670809 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2520757931 Top2: 46.6255056419 Top3: 62.8060464126 Top5: - 
+################
+
+Epoch: 155  Train Loss: 0.172210038329
+###############
+All videos all classes       : Top1: 69.960546007 Top2: 75.4614303206 Top3: 76.8672622557 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0817543113 Top2: 46.4977645306 Top3: 62.8060464126 Top5: - 
+################
+
+Epoch: 156  Train Loss: 0.172256982506
+###############
+All videos all classes       : Top1: 69.9469411818 Top2: 75.4070110199 Top3: 76.8854020226 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8262720886 Top2: 46.1784117522 Top3: 63.1041090057 Top5: - 
+################
+
+Epoch: 157  Train Loss: 0.172022980962
+###############
+All videos all classes       : Top1: 69.9469411818 Top2: 75.4795700875 Top3: 76.8854020226 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6985309772 Top2: 46.0932510113 Top3: 63.1466893762 Top5: - 
+################
+
+Epoch: 158  Train Loss: 0.171931877249
+###############
+All videos all classes       : Top1: 69.9922905991 Top2: 75.4523604372 Top3: 76.8899369643 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2094954226 Top2: 46.1358313817 Top3: 62.7847562274 Top5: - 
+################
+
+Epoch: 159  Train Loss: 0.171859043188
+###############
+All videos all classes       : Top1: 69.9877556573 Top2: 75.488639971 Top3: 76.8672622557 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 46.0293804556 Top3: 63.2957206728 Top5: - 
+################
+
+Epoch: 160  Train Loss: 0.171747018383
+###############
+All videos all classes       : Top1: 69.9061267063 Top2: 75.438755612 Top3: 76.8763321391 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.3153076432 Top2: 45.9442197147 Top3: 63.5724930807 Top5: - 
+################
+
+Epoch: 161  Train Loss: 0.171644742925
+###############
+All videos all classes       : Top1: 69.9786857739 Top2: 75.4614303206 Top3: 76.8854020226 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.677240792 Top2: 46.0932510113 Top3: 63.2318501171 Top5: - 
+################
+
+Epoch: 162  Train Loss: 0.171566058461
+###############
+All videos all classes       : Top1: 69.9650809487 Top2: 75.4931749127 Top3: 76.8536574305 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8475622738 Top2: 46.1784117522 Top3: 63.2318501171 Top5: - 
+################
+
+Epoch: 163  Train Loss: 0.17142348651
+###############
+All videos all classes       : Top1: 70.0058954242 Top2: 75.4432905537 Top3: 76.8763321391 Top5: 77.805995193
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.4436874601 Top2: 46.4338939749 Top3: 62.7634660422 Top5: - 
+################
+
+Epoch: 164  Train Loss: 0.171371029621
+###############
+All videos all classes       : Top1: 70.010430366 Top2: 75.4568953789 Top3: 76.8854020226 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 46.4338939749 Top3: 62.8486267831 Top5: - 
+################
+
+Epoch: 165  Train Loss: 0.171275498511
+###############
+All videos all classes       : Top1: 70.010430366 Top2: 75.4659652623 Top3: 76.8717971974 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9753033851 Top2: 46.2635724931 Top3: 63.0828188205 Top5: - 
+################
+
+Epoch: 166  Train Loss: 0.171176128338
+###############
+All videos all classes       : Top1: 69.9968255408 Top2: 75.4795700875 Top3: 76.8672622557 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8901426442 Top2: 46.2635724931 Top3: 63.1041090057 Top5: - 
+################
+
+Epoch: 167  Train Loss: 0.171030562316
+###############
+All videos all classes       : Top1: 69.9514761235 Top2: 75.4750351458 Top3: 76.8763321391 Top5: 77.7651807174
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7836917181 Top2: 46.3913136044 Top3: 63.2318501171 Top5: - 
+################
+
+Epoch: 168  Train Loss: 0.170955475696
+###############
+All videos all classes       : Top1: 70.0058954242 Top2: 75.4795700875 Top3: 76.862727314 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2307856078 Top2: 46.5829252714 Top3: 62.8273365978 Top5: - 
+################
+
+Epoch: 169  Train Loss: 0.170883501818
+###############
+All videos all classes       : Top1: 69.9877556573 Top2: 75.4296857285 Top3: 76.8672622557 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1882052374 Top2: 46.4764743453 Top3: 62.933787524 Top5: - 
+################
+
+Epoch: 170  Train Loss: 0.170791867596
+###############
+All videos all classes       : Top1: 70.010430366 Top2: 75.4795700875 Top3: 76.8854020226 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.060464126 Top2: 46.2848626783 Top3: 62.933787524 Top5: - 
+################
+
+Epoch: 171  Train Loss: 0.170632295186
+###############
+All videos all classes       : Top1: 69.9922905991 Top2: 75.4659652623 Top3: 76.8808670809 Top5: 77.7787855426
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4430487545 Top2: 45.9655098999 Top3: 63.5724930807 Top5: - 
+################
+
+Epoch: 172  Train Loss: 0.170608893878
+###############
+All videos all classes       : Top1: 69.9696158904 Top2: 75.4478254954 Top3: 76.8808670809 Top5: 77.805995193
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 46.0080902704 Top3: 63.4447519693 Top5: - 
+################
+
+Epoch: 173  Train Loss: 0.170537132011
+###############
+All videos all classes       : Top1: 69.9968255408 Top2: 75.4659652623 Top3: 76.8899369643 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.1030444965 Top2: 46.2848626783 Top3: 63.0402384501 Top5: - 
+################
+
+Epoch: 174  Train Loss: 0.170545427543
+###############
+All videos all classes       : Top1: 70.0467098998 Top2: 75.4705002041 Top3: 76.8808670809 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6133702363 Top2: 45.9229295295 Top3: 63.4021715989 Top5: - 
+################
+
+Epoch: 175  Train Loss: 0.170405223772
+###############
+All videos all classes       : Top1: 69.9786857739 Top2: 75.488639971 Top3: 76.8899369643 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7836917181 Top2: 46.0506706408 Top3: 63.4660421546 Top5: - 
+################
+
+Epoch: 176  Train Loss: 0.170291667142
+###############
+All videos all classes       : Top1: 69.8789170559 Top2: 75.4432905537 Top3: 76.8808670809 Top5: 77.7878554261
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0391739408 Top2: 46.3274430488 Top3: 63.2105599319 Top5: - 
+################
+
+Epoch: 177  Train Loss: 0.170419890585
+###############
+All videos all classes       : Top1: 69.9922905991 Top2: 75.4568953789 Top3: 76.8990068478 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6985309772 Top2: 46.0293804556 Top3: 63.5512028955 Top5: - 
+################
+
+Epoch: 178  Train Loss: 0.170057036286
+###############
+All videos all classes       : Top1: 69.960546007 Top2: 75.4478254954 Top3: 76.8854020226 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7411113477 Top2: 46.0506706408 Top3: 63.5724930807 Top5: - 
+################
+
+Epoch: 179  Train Loss: 0.169967188659
+###############
+All videos all classes       : Top1: 69.9968255408 Top2: 75.4478254954 Top3: 76.8717971974 Top5: 77.805995193
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8049819033 Top2: 46.0719608261 Top3: 63.4873323398 Top5: - 
+################
+
+Epoch: 180  Train Loss: 0.169922042583
+###############
+All videos all classes       : Top1: 69.9922905991 Top2: 75.4478254954 Top3: 76.8854020226 Top5: 77.8105301347
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 46.3274430488 Top3: 63.2531403023 Top5: - 
+################
+
+Epoch: 181  Train Loss: 0.16980424889
+###############
+All videos all classes       : Top1: 69.9832207156 Top2: 75.4568953789 Top3: 76.8854020226 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6133702363 Top2: 46.0293804556 Top3: 63.5299127102 Top5: - 
+################
+
+Epoch: 182  Train Loss: 0.169764120932
+###############
+All videos all classes       : Top1: 69.9560110653 Top2: 75.4750351458 Top3: 76.9035417895 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.677240792 Top2: 46.0293804556 Top3: 63.4660421546 Top5: - 
+################
+
+Epoch: 183  Train Loss: 0.169798133329
+###############
+All videos all classes       : Top1: 69.9696158904 Top2: 75.4614303206 Top3: 76.8854020226 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6346604215 Top2: 46.0506706408 Top3: 63.4021715989 Top5: - 
+################
+
+Epoch: 184  Train Loss: 0.16954759387
+###############
+All videos all classes       : Top1: 69.960546007 Top2: 75.4841050293 Top3: 76.8672622557 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.2307856078 Top2: 46.3700234192 Top3: 63.2105599319 Top5: - 
+################
+
+Epoch: 185  Train Loss: 0.169673783594
+###############
+All videos all classes       : Top1: 69.9333363566 Top2: 75.4795700875 Top3: 76.8808670809 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0178837556 Top2: 46.4338939749 Top3: 63.1041090057 Top5: - 
+################
+
+Epoch: 186  Train Loss: 0.169400885715
+###############
+All videos all classes       : Top1: 69.9832207156 Top2: 75.4795700875 Top3: 76.894471906 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.677240792 Top2: 46.0080902704 Top3: 63.6150734511 Top5: - 
+################
+
+Epoch: 187  Train Loss: 0.169342256103
+###############
+All videos all classes       : Top1: 69.9650809487 Top2: 75.4659652623 Top3: 76.894471906 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 28.0817543113 Top2: 46.4338939749 Top3: 63.0615286353 Top5: - 
+################
+
+Epoch: 188  Train Loss: 0.169229114138
+###############
+All videos all classes       : Top1: 69.9968255408 Top2: 75.4705002041 Top3: 76.8717971974 Top5: 77.7969253095
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4004683841 Top2: 45.8590589738 Top3: 63.9770066 Top5: - 
+################
+
+Epoch: 189  Train Loss: 0.169146779345
+###############
+All videos all classes       : Top1: 69.9514761235 Top2: 75.4659652623 Top3: 76.8899369643 Top5: 77.8105301347
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.4430487545 Top2: 45.9655098999 Top3: 63.6576538216 Top5: - 
+################
+
+Epoch: 190  Train Loss: 0.169166933152
+###############
+All videos all classes       : Top1: 69.9696158904 Top2: 75.438755612 Top3: 76.8808670809 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.6133702363 Top2: 46.0932510113 Top3: 63.5512028955 Top5: - 
+################
+
+Epoch: 191  Train Loss: 0.169019820169
+###############
+All videos all classes       : Top1: 69.9786857739 Top2: 75.4750351458 Top3: 76.8854020226 Top5: 77.8014602512
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.485629125 Top2: 45.9655098999 Top3: 63.7428145625 Top5: - 
+################
+
+Epoch: 192  Train Loss: 0.168996626249
+###############
+All videos all classes       : Top1: 69.9514761235 Top2: 75.4750351458 Top3: 76.894471906 Top5: 77.7969253095
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.677240792 Top2: 45.9868000852 Top3: 63.7853949329 Top5: - 
+################
+
+Epoch: 193  Train Loss: 0.168877497619
+###############
+All videos all classes       : Top1: 69.8925218811 Top2: 75.4750351458 Top3: 76.8854020226 Top5: 77.7833204843
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.8049819033 Top2: 46.2422823079 Top3: 63.6363636364 Top5: - 
+################
+
+Epoch: 194  Train Loss: 0.16875685837
+###############
+All videos all classes       : Top1: 69.9650809487 Top2: 75.4750351458 Top3: 76.8899369643 Top5: 77.7923903678
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.868852459 Top2: 46.0932510113 Top3: 63.5724930807 Top5: - 
+################
+
+Epoch: 195  Train Loss: 0.168767276406
+###############
+All videos all classes       : Top1: 70.0058954242 Top2: 75.488639971 Top3: 76.9035417895 Top5: 77.7969253095
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.868852459 Top2: 46.2209921226 Top3: 63.3595912284 Top5: - 
+################
+
+Epoch: 196  Train Loss: 0.16862738029
+###############
+All videos all classes       : Top1: 70.0421749581 Top2: 75.4795700875 Top3: 76.8854020226 Top5: 77.8150650764
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 46.2422823079 Top3: 63.4234617841 Top5: - 
+################
+
+Epoch: 197  Train Loss: 0.168564641531
+###############
+All videos all classes       : Top1: 69.9650809487 Top2: 75.4614303206 Top3: 76.8854020226 Top5: 77.805995193
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.7198211624 Top2: 46.1997019374 Top3: 63.5937832659 Top5: - 
+################
+
+Epoch: 198  Train Loss: 0.168512704637
+###############
+All videos all classes       : Top1: 70.0149653077 Top2: 75.4523604372 Top3: 76.894471906 Top5: 77.8196000181
+Unseen videos all classes    : Top1: 0.0 Top2: 0.0 Top3: 0.0 Top5: 0.0
+Unseen videos unseen classes : Top1: 27.9540131999 Top2: 46.348733234 Top3: 63.4660421546 Top5: - 
+################
+
+Epoch: 199  Train Loss: 0.168465491205
