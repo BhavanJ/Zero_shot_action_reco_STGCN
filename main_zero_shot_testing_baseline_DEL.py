@@ -14,8 +14,9 @@ import torch.optim as optim
 from torch.autograd import Variable
 import pdb
 
-SAVE_LOCATION = './work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test_2/'
-SAVE_NAME = '_exp_3'
+SAVE_LOCATION = './work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test/'
+SAVE_NAME = ''
+
 UNSEEN_CLASSES = [3,8,11,16,51]
 
 
@@ -26,7 +27,7 @@ def get_parser():
 		description='Spatial Temporal Graph Convolution Network')
 	parser.add_argument(
 		'--work-dir',
-		default='./work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test_2',
+		default='./work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test',
 		help='the work folder for storing results')
 	parser.add_argument(
 		'--config',
@@ -181,7 +182,7 @@ class Processor():
 			self.data_loader['train'] = torch.utils.data.DataLoader(
 				dataset=Feeder(**self.arg.train_feeder_args),
 				batch_size=self.arg.batch_size,
-				shuffle=False,
+				shuffle=True,
 				num_workers=self.arg.num_worker)
 
 
@@ -349,24 +350,15 @@ class Processor():
 		features_array = np.empty((0,256))
 		labels_array = np.empty((0))
 
-
+		correct = 0.0
+		total =0.0
 
 		self.model.eval()
 		self.print_log('Eval epoch: {}'.format(epoch + 1))
 		for ln in loader_name:
-
-			correct_all=0.0
-			total_all = 0.0
-			correct_unseen=0.0
-			total_unseen = 0.0
 			loss_value = []
 			score_frag = []
-
 			for batch_idx, (data, label) in enumerate(self.data_loader[ln]):
-				
-				# pdb.set_trace()
-
-
 				data = Variable(
 					data.float().cuda(self.output_device),
 					requires_grad=False,
@@ -377,17 +369,17 @@ class Processor():
 					volatile=True)
 				
 				output = self.model(data)
+
 				_,predictions = torch.max(output,dim=1)
 
-				correct_all += torch.sum(predictions==label).data[0]
-				total_all += len(label)
-
-				for iiii in range(len(label)):
-					if label[iiii].data[0] in UNSEEN_CLASSES:
-						total_unseen +=1.0
-						if label[iiii].data[0] == predictions[iiii].data[0]:
-							correct_unseen +=1.0
-						# pdb.set_trace()		
+				for ii in range(len(label)):
+					if label[ii].data[0] in UNSEEN_CLASSES:
+						total +=1.0
+						if label[ii].data[0] == predictions[ii].data[0]:
+							pdb.set_trace()
+							correct +=1.0
+						pdb.set_trace()		
+					print(total,correct)		
 
 				feature_256_batch = self.model.feat_256d[:,:,0].data	#...this gives the features
 				label_batch = label.data
@@ -397,37 +389,15 @@ class Processor():
 
 				# pdb.set_trace()
 
-				if total_all != 0:
-					total_accuracy = correct_all/total_all*100.0
-				else:
-					total_accuracy = 0.0
-
-				if total_unseen != 0: 	
-					unseen_accuracy = correct_unseen/total_unseen*100.0
-				else:
-					unseen_accuracy = 0.0
-
-				if batch_idx%50 == 0:
-					print('Batch No.: ' + str(batch_idx) + 'ALL class accuracy:' + str(total_accuracy) + 'Unseen class accuracy:' + str(unseen_accuracy) )
-
 				loss = self.loss(output, label)
 				score_frag.append(output.data.cpu().numpy())
 				loss_value.append(loss.data[0])
 
-			np.save(SAVE_LOCATION+'features_array_' + ln + SAVE_NAME, features_array)
-			np.save(SAVE_LOCATION+'labels_array_'   + ln + SAVE_NAME, labels_array)
+			# np.save(SAVE_LOCATION+'features_array_' + ln, features_array)
+			# np.save(SAVE_LOCATION+'labels_array_'   + ln, labels_array)
 
-			if total_all != 0:
-				total_accuracy = correct_all/total_all*100.0
-			else:
-				total_accuracy = 0.0
+			print('\nFinal accuracy for unseen classes in ' + ln + ' dataset: ' +str(correct/total*100))
 
-			if total_unseen != 0: 	
-				unseen_accuracy = correct_unseen/total_unseen*100.0
-			else:
-				unseen_accuracy = 0.0
-
-			print('Final results- ' + 'ALL class accuracy:' + str(total_accuracy) + 'Unseen class accuracy:' + str(unseen_accuracy) )
 			score = np.concatenate(score_frag)
 			score_dict = dict(
 				zip(self.data_loader[ln].dataset.sample_name, score))
@@ -441,6 +411,7 @@ class Processor():
 				with open('{}/epoch{}_{}_score.pkl'.format(
 						self.arg.work_dir, epoch + 1, ln), 'wb') as f:
 					pickle.dump(score_dict, f)
+
 
 	def start(self):
 		if self.arg.phase == 'train':
@@ -468,16 +439,13 @@ class Processor():
 			self.print_log('Model:   {}.'.format(self.arg.model))
 			self.print_log('Weights: {}.'.format(self.arg.weights))
 			
-
 			print('\nComputing features on test set\n')
 			self.eval(
 			    epoch=0, save_score=self.arg.save_score, loader_name=['test'])
-
 			print('\nComputing features on train set\n')
 			self.eval(
 				epoch=0, save_score=self.arg.save_score, loader_name=['train'])
 
-			
 			self.print_log('Done.\n')
 
 

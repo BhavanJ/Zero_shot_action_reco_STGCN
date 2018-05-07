@@ -14,10 +14,10 @@ import torch.optim as optim
 from torch.autograd import Variable
 import pdb
 
-SAVE_LOCATION = './work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test_2/'
-SAVE_NAME = '_exp_3'
-UNSEEN_CLASSES = [3,8,11,16,51]
-
+SAVE_LOCATION = './work_dir/NTU-RGB-D_zero_shot_furtherest_neigh/xview/ST_GCN_exp1_features/'
+SAVE_NAME = '_exp_1'
+#UNSEEN_CLASSES = [3,8,11,16,51] #OLD ONES
+UNSEEN_CLASSES = [10,24,41,52,55] # For furthest neighbhours...classes go from 0 to 59 here 
 
 def get_parser():
 
@@ -26,11 +26,11 @@ def get_parser():
 		description='Spatial Temporal Graph Convolution Network')
 	parser.add_argument(
 		'--work-dir',
-		default='./work_dir/NTU-RGB-D_zero_shot/xview/ST_GCN_test_2',
+		default='./work_dir/NTU-RGB-D_zero_shot_furtherest_neigh/xview/ST_GCN_exp1',
 		help='the work folder for storing results')
 	parser.add_argument(
 		'--config',
-		default='./config/st_gcn/nturgbd-cross-view_zero_shot/test.yaml', #NTU-RGB-D/xview/ST_GCN.yaml',
+		default='./config/st_gcn/nturgbd-cross-view_zero_shot_furtherest_neigh/test.yaml', #NTU-RGB-D/xview/ST_GCN.yaml',
 		help='path to the configuration file')
 
 	# processor
@@ -389,6 +389,7 @@ class Processor():
 							correct_unseen +=1.0
 						# pdb.set_trace()		
 
+				#pdb.set_trace()
 				feature_256_batch = self.model.feat_256d[:,:,0].data	#...this gives the features
 				label_batch = label.data
 
@@ -469,13 +470,15 @@ class Processor():
 			self.print_log('Weights: {}.'.format(self.arg.weights))
 			
 
+			print('\nComputing features on train set\n')
+			self.eval(
+				epoch=0, save_score=self.arg.save_score, loader_name=['train'])
+
+
 			print('\nComputing features on test set\n')
 			self.eval(
 			    epoch=0, save_score=self.arg.save_score, loader_name=['test'])
 
-			print('\nComputing features on train set\n')
-			self.eval(
-				epoch=0, save_score=self.arg.save_score, loader_name=['train'])
 
 			
 			self.print_log('Done.\n')
@@ -515,4 +518,5 @@ if __name__ == '__main__':
 
 	arg = parser.parse_args()
 	processor = Processor(arg)
+	#pdb.set_trace()
 	processor.start()
