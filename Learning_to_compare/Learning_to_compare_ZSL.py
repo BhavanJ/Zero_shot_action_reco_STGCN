@@ -24,18 +24,6 @@ import pdb
 #TODO:.....add if use_GPU, normalize the embeddings, add unseen classes
 ##where are they converting tensors to Variables
 
-NO_CLASSES 			= 60 
-NO_SEEN_CLASSES 	= 55
-NO_UNSEEN_CLASSES 	= 5
-
-UNSEEN_CLASSES = [10,24,41,52,55] # For furthest neighbhours...classes go from 0 to 59 here 
-DIM_STGCN = 256
-DIM_LANGAUGE = 700
-
-NORMALIZE_VIS = True
-NORMALIZE_EMB = True
-LANG_EMB_RANDOM = False
-
 FEATURE_DIR = '/home/bjasani/Desktop/CMU_HW/VLR_project/STGN/st-gcn/work_dir/NTU-RGB-D_zero_shot_furtherest_neigh/xview/ST_GCN_exp1_features/'
 SKELETON_DIR = '/home/bjasani/Desktop/CMU_HW/VLR_project/STGN/st-gcn/data/NTU-RGB-D_zero_shot_furtherest_neigh/xview/'
 FEATURES_TRAIN_NAME 	= 'features_array_train_exp_1.npy'
@@ -44,6 +32,16 @@ LABELS_TRAIN_NAME       = 'labels_array_train_exp_1.npy'
 LABELS_TEST_NAME    	= 'labels_array_test_exp_1.npy'
 LANGUAGE_EMBEDDING_NAME = 'bigram_embeddings.npy'
 
+
+NO_CLASSES 			= 60 
+NO_SEEN_CLASSES 	= 55
+NO_UNSEEN_CLASSES 	= 5
+UNSEEN_CLASSES = [10,24,41,52,55] # For furthest neighbhours...classes go from 0 to 59 here 
+DIM_STGCN = 256
+DIM_LANGAUGE = 700
+NORMALIZE_VIS = True
+NORMALIZE_EMB = True
+LANG_EMB_RANDOM = False
 BATCH_SIZE = 32
 EPISODE = 500000
 TEST_EPISODE = 1000
@@ -52,13 +50,11 @@ GPU = 0
 
 #use_cuda = torch.cuda.is_available()
 
-
 print('############################')
 print('############################')
 print('LANGUAGE_EMBEDDING_RANDOM: ', LANG_EMB_RANDOM)
 print('############################')
 print('############################')
-
 
 class AttributeNetwork(nn.Module):
 	"""docstring for RelationNetwork"""
@@ -86,7 +82,6 @@ class RelationNetwork(nn.Module):
 
 
 def main():
-	# step 1: init dataset
 	print("init dataset")
 
 	train_features =  np.load(FEATURE_DIR+FEATURES_TRAIN_NAME)
@@ -178,12 +173,7 @@ def main():
 
 	train_data = TensorDataset(train_features,train_label)
 
-
-	# pdb.set_trace()
-	# init network
 	print("init networks")
-
-
 #DTODO: CHNAGE THE NETWORK...........  attribute_network = size of embedding, size of visualfeat/2, size of visualfeat 
 #                                     relation_network =  2* size of visualfeat, some hidden size ....evnetaully this networks output is 1
 	attribute_network = AttributeNetwork(DIM_LANGAUGE,DIM_STGCN/2,DIM_STGCN)
@@ -196,7 +186,6 @@ def main():
 	attribute_network_scheduler = StepLR(attribute_network_optim,step_size=200000,gamma=0.5)
 	relation_network_optim = torch.optim.Adam(relation_network.parameters(),lr=LEARNING_RATE)
 	relation_network_scheduler = StepLR(relation_network_optim,step_size=200000,gamma=0.5)
-
 
 	print("training...")
 	last_accuracy = 0.0
@@ -244,7 +233,6 @@ def main():
 		re_batch_labels = torch.LongTensor(re_batch_labels)
 		# pdb.set_trace()
 		
-
 		# loss
 		mse = nn.MSELoss().cuda(GPU)
 		one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1)).cuda(GPU)
