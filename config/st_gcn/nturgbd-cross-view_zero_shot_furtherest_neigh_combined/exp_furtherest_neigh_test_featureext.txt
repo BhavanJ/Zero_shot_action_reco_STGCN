@@ -1,0 +1,46 @@
+[ Mon May  7 00:18:59 2018 ] Load weights from ./work_dir/NTU-RGB-D_zero_shot_furtherest_neigh/xview/ST_GCN_exp1/epoch80_model.pt.
+[ Mon May  7 00:18:59 2018 ] Model:   st_gcn.net.ST_GCN.
+[ Mon May  7 00:18:59 2018 ] Weights: ./work_dir/NTU-RGB-D_zero_shot_furtherest_neigh/xview/ST_GCN_exp1/epoch80_model.pt.
+
+Computing features on train set
+
+[ Mon May  7 00:18:59 2018 ] Eval epoch: 1
+Batch No.: 0ALL class accuracy:91.6666666667Unseen class accuracy:0.0
+Batch No.: 50ALL class accuracy:96.8545751634Unseen class accuracy:0.0
+Batch No.: 100ALL class accuracy:96.5140264026Unseen class accuracy:0.0
+Batch No.: 150ALL class accuracy:96.7163355408Unseen class accuracy:0.0
+Batch No.: 200ALL class accuracy:96.5485074627Unseen class accuracy:0.0
+Batch No.: 250ALL class accuracy:96.5637450199Unseen class accuracy:0.0
+Batch No.: 300ALL class accuracy:96.4908637874Unseen class accuracy:0.0
+Batch No.: 350ALL class accuracy:96.5159069326Unseen class accuracy:0.0
+Batch No.: 400ALL class accuracy:96.5243142145Unseen class accuracy:0.0
+Batch No.: 450ALL class accuracy:96.4846637103Unseen class accuracy:0.0
+Batch No.: 500ALL class accuracy:96.5194610778Unseen class accuracy:0.0
+Batch No.: 550ALL class accuracy:96.5139140956Unseen class accuracy:0.0
+Batch No.: 600ALL class accuracy:96.5578202995Unseen class accuracy:0.0
+Batch No.: 650ALL class accuracy:96.5469790067Unseen class accuracy:0.0
+Batch No.: 700ALL class accuracy:96.5317403709Unseen class accuracy:0.0
+Final results- ALL class accuracy:96.5332328473Unseen class accuracy:0.0
+[ Mon May  7 00:27:34 2018 ] 	Mean train loss of 719 batches: 0.115877308641.
+[ Mon May  7 00:27:35 2018 ] 	Top1: 96.53%
+[ Mon May  7 00:27:36 2018 ] 	Top5: 99.76%
+
+Computing features on test set
+
+[ Mon May  7 00:27:37 2018 ] Eval epoch: 1
+Batch No.: 0ALL class accuracy:66.6666666667Unseen class accuracy:0.0
+Batch No.: 50ALL class accuracy:72.385620915Unseen class accuracy:0.0
+Batch No.: 100ALL class accuracy:71.8853135314Unseen class accuracy:0.0
+Batch No.: 150ALL class accuracy:71.0954746137Unseen class accuracy:0.0
+Batch No.: 200ALL class accuracy:71.2686567164Unseen class accuracy:0.0
+Batch No.: 250ALL class accuracy:71.1570385126Unseen class accuracy:0.0
+Batch No.: 300ALL class accuracy:71.0478959025Unseen class accuracy:0.0
+Batch No.: 350ALL class accuracy:70.7858499525Unseen class accuracy:0.0
+Batch No.: 400ALL class accuracy:70.8073566085Unseen class accuracy:0.0
+Batch No.: 450ALL class accuracy:70.8841463415Unseen class accuracy:0.0
+Final results- ALL class accuracy:70.8637166538Unseen class accuracy:0.0
+[ Mon May  7 00:33:08 2018 ] 	Mean test loss of 460 batches: 4.69415769733.
+[ Mon May  7 00:33:08 2018 ] 	Top1: 70.86%
+[ Mon May  7 00:33:09 2018 ] 	Top5: 77.89%
+[ Mon May  7 00:33:10 2018 ] Done.
+
