@@ -127,27 +127,36 @@ def main():
 
 	all_attributes = langauge_embeddings
 	attribute = langauge_embeddings
-
 	testclasses_id = np.asarray(UNSEEN_CLASSES)
 	test_id = np.asarray(UNSEEN_CLASSES)
     att_pro = attribute[test_id]      
     attributes = torch.from_numpy(attribute)
 
-
-
+###################################################################
 	test_features_all =  np.load(FEATURE_DIR+FEATURES_TEST_NAME)
 	if NORMALIZE_VIS == True:
 		test_features_all = preprocessing.normalize(test_features_all, axis=1, copy=False)	
 	test_label_all   =  np.load(FEATURE_DIR+LABELS_TEST_NAME)
 
-
-# LOOP OVER AND SEPERATE SEEN AND UNSEEN FEATURES
-	for ffff in test_feature_all:
-	test_features
-	test_label
-	test_seen_features
-	test_seen_label
+	test_features = []
+	test_label = []
+	test_seen_features = []
+	test_seen_label = []
 	
+	for tindx in range(len(test_features_all)):
+		if test_label_all[tindx] in UNSEEN_CLASSES:	
+#TODO...verify
+			test_features.append(test_features_all[tindx])
+			test_label.append(test_label_all[tindx])
+		else:			
+			test_seen_features.append(test_features_all[tindx])
+			test_seen_label.append(test_label_all[tindx])
+
+	test_features = np.asarray(test_features)
+	test_label = np.asarray(test_label)
+	test_seen_features = np.asarray(test_seen_features)
+	test_seen_label = np.asarray(test_seen_label)
+##################################################################
 
 	test_features = torch.from_numpy(test_features)
 	test_label=torch.from_numpy(test_label).unsqueeze(1)
@@ -157,7 +166,7 @@ def main():
     test_attributes = torch.from_numpy(att_pro).float()
 
 
-
+#TODO
 # self.features_array = torch.FloatTensor(self.features_array)
 # self.features_array = self.features_array.cuda() if use_cuda else self.features_array
 # self.labels_array = torch.LongTensor(self.labels_array)
