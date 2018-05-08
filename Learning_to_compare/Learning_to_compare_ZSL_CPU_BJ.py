@@ -48,7 +48,7 @@ TEST_EPISODE = 1000
 LEARNING_RATE = 1e-5
 GPU = 0
 
-#use_cuda = torch.cuda.is_available()
+use_cuda = torch.cuda.is_available()
 
 print('############################')
 print('############################')
@@ -85,15 +85,24 @@ def main():
 	print("init dataset")
 
 	train_features =  np.load(FEATURE_DIR+FEATURES_TRAIN_NAME)
+	##train_features = np.random.rand(1000,256)
+	##REMOVE
+
 	if NORMALIZE_VIS == True:
 		train_features = preprocessing.normalize(train_features, axis=1, copy=False)	
 	train_label   =  np.load(FEATURE_DIR+LABELS_TRAIN_NAME).astype(int)
+	##train_label = np.random.random_integers(59,size = (1000))
+	##REMOVE
+
 
 	train_features = torch.from_numpy(train_features)
 	train_label=torch.from_numpy(train_label).unsqueeze(1)
 
 
 	langauge_embeddings = np.load(FEATURE_DIR+LANGUAGE_EMBEDDING_NAME)
+	##langauge_embeddings = np.random.rand(60,700)
+	##REMOVE
+
 	if LANG_EMB_RANDOM == True:
 		langauge_embeddings = np.random.random(langauge_embeddings.shape)
 
@@ -112,9 +121,14 @@ def main():
 
 ###################################################################
 	test_features_all =  np.load(FEATURE_DIR+FEATURES_TEST_NAME)
+	##test_features_all = np.random.rand(800,256)
+	##REMOVE
+
 	if NORMALIZE_VIS == True:
 		test_features_all = preprocessing.normalize(test_features_all, axis=1, copy=False)	
 	test_label_all   =  np.load(FEATURE_DIR+LABELS_TEST_NAME)
+	##test_label_all = np.random.random_integers(59,size = (800))
+	##REMOVE
 
 	test_features = []
 	test_label = []
@@ -179,8 +193,11 @@ def main():
 	attribute_network = AttributeNetwork(DIM_LANGAUGE,DIM_STGCN/2,DIM_STGCN)
 	relation_network = RelationNetwork(2*DIM_STGCN,DIM_STGCN/2)
 
-	# attribute_network.cuda(GPU)
-	# relation_network.cuda(GPU)
+	if use_cuda == True:
+		attribute_network.cuda(GPU)
+		relation_network.cuda(GPU)
+
+	# pdb.set_trace()		
 
 	attribute_network_optim = torch.optim.Adam(attribute_network.parameters(),lr=LEARNING_RATE,weight_decay=1e-5)
 	attribute_network_scheduler = StepLR(attribute_network_optim,step_size=200000,gamma=0.5)
@@ -207,9 +224,14 @@ def main():
 		sample_attributes = torch.Tensor([all_attributes[i] for i in sample_labels]).squeeze(1)
 		class_num = sample_attributes.shape[0]
 
-		batch_features = Variable(batch_features).float()  # 32*1024
-		sample_features = attribute_network(Variable(sample_attributes)) #k*312
+		# pdb.set_trace()
 
+		if use_cuda == True:	
+			batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
+			sample_features = attribute_network(Variable(sample_attributes).cuda(GPU)) #k*312
+		else:
+			batch_features = Variable(batch_features).float()  # 32*1024
+			sample_features = attribute_network(Variable(sample_attributes)) #k*312
 
 		sample_features_ext = sample_features.unsqueeze(0).repeat(BATCH_SIZE,1,1)
 		batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
@@ -234,8 +256,14 @@ def main():
 		# pdb.set_trace()
 		
 		# loss
-		mse = nn.MSELoss()
-		one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1))
+
+		if use_cuda == True:	
+			mse = nn.MSELoss().cuda(GPU)
+			one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1)).cuda(GPU)
+		else:
+			mse = nn.MSELoss()
+			one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1))
+
 		loss = mse(relations,one_hot_labels)
 		# pdb.set_trace()
 
@@ -275,8 +303,12 @@ def main():
 
 					batch_size = batch_labels.shape[0]
 
-					batch_features = Variable(batch_features).float()  # 32*1024
-					sample_features = attribute_network(Variable(sample_attributes).float())
+					if use_cuda == True:						
+						batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
+						sample_features = attribute_network(Variable(sample_attributes).cuda(GPU).float())
+					else:
+						batch_features = Variable(batch_features).float()  # 32*1024
+						sample_features = attribute_network(Variable(sample_attributes).float())
 
 					sample_features_ext = sample_features.unsqueeze(0).repeat(batch_size,1,1)
 					batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
