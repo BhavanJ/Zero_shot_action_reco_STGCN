@@ -11,6 +11,11 @@ import argparse
 import random
 import os
 from sklearn.metrics import accuracy_score
+import time
+import yaml
+import pickle
+from collections import OrderedDict
+from sklearn import preprocessing
 import pdb
 
 # Written by Bhavan Jasani (Maverick)
@@ -23,11 +28,9 @@ NO_CLASSES 			= 60
 NO_SEEN_CLASSES 	= 55
 NO_UNSEEN_CLASSES 	= 5
 
-
-UNSEEN_CLASSES = #[3,8,11,16,51]
+UNSEEN_CLASSES = [10,24,41,52,55] # For furthest neighbhours...classes go from 0 to 59 here 
 DIM_STGCN = 256
 DIM_LANGAUGE = 700
-
 
 NORMALIZE_VIS = True
 NORMALIZE_EMB = True
@@ -41,26 +44,13 @@ LABELS_TRAIN_NAME       = 'labels_array_train_exp_1.npy'
 LABELS_TEST_NAME    	= 'labels_array_test_exp_1.npy'
 LANGUAGE_EMBEDDING_NAME = 'bigram_embeddings.npy'
 
+BATCH_SIZE = 32
+EPISODE = 500000
+TEST_EPISODE = 1000
+LEARNING_RATE = 1e-5
+GPU = 0
 
-
-#TODO: Remove this arg parser
-parser = argparse.ArgumentParser(description="Zero Shot Learning")
-parser.add_argument("-b","--batch_size",type = int, default = 32)
-parser.add_argument("-e","--episode",type = int, default= 500000)
-parser.add_argument("-t","--test_episode", type = int, default = 1000)
-parser.add_argument("-l","--learning_rate", type = float, default = 1e-5)
-parser.add_argument("-g","--gpu",type=int, default=0)
-args = parser.parse_args()
-
-# Hyper Parameters
-
-BATCH_SIZE = args.batch_size
-EPISODE = args.episode
-TEST_EPISODE = args.test_episode
-LEARNING_RATE = args.learning_rate
-GPU = args.gpu
-
-use_cuda = torch.cuda.is_available()
+#use_cuda = torch.cuda.is_available()
 
 
 print('############################')
@@ -70,46 +60,39 @@ print('############################')
 print('############################')
 
 
-
 class AttributeNetwork(nn.Module):
-    """docstring for RelationNetwork"""
-    def __init__(self,input_size,hidden_size,output_size):
-        super(AttributeNetwork, self).__init__()
-        self.fc1 = nn.Linear(input_size,hidden_size)
-        self.fc2 = nn.Linear(hidden_size,output_size)
+	"""docstring for RelationNetwork"""
+	def __init__(self,input_size,hidden_size,output_size):
+		super(AttributeNetwork, self).__init__()
+		self.fc1 = nn.Linear(input_size,hidden_size)
+		self.fc2 = nn.Linear(hidden_size,output_size)
 
-    def forward(self,x):
-
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-
-        return x
+	def forward(self,x):
+		x = F.relu(self.fc1(x))
+		x = F.relu(self.fc2(x))
+		return x
 
 class RelationNetwork(nn.Module):
-    """docstring for RelationNetwork"""
-    def __init__(self,input_size,hidden_size,):
-        super(RelationNetwork, self).__init__()
-        self.fc1 = nn.Linear(input_size,hidden_size)
-        self.fc2 = nn.Linear(hidden_size,1)
+	"""docstring for RelationNetwork"""
+	def __init__(self,input_size,hidden_size,):
+		super(RelationNetwork, self).__init__()
+		self.fc1 = nn.Linear(input_size,hidden_size)
+		self.fc2 = nn.Linear(hidden_size,1)
 
-    def forward(self,x):
-
-        x = F.relu(self.fc1(x))
-        x = F.sigmoid(self.fc2(x))
-        return x
+	def forward(self,x):
+		x = F.relu(self.fc1(x))
+		x = F.sigmoid(self.fc2(x))
+		return x
 
 
 def main():
-    # step 1: init dataset
-    print("init dataset")
-
-
-    pdb.set_trace()
+	# step 1: init dataset
+	print("init dataset")
 
 	train_features =  np.load(FEATURE_DIR+FEATURES_TRAIN_NAME)
 	if NORMALIZE_VIS == True:
 		train_features = preprocessing.normalize(train_features, axis=1, copy=False)	
-	train_label   =  np.load(FEATURE_DIR+LABELS_TRAIN_NAME)
+	train_label   =  np.load(FEATURE_DIR+LABELS_TRAIN_NAME).astype(int)
 
 	train_features = torch.from_numpy(train_features)
 	train_label=torch.from_numpy(train_label).unsqueeze(1)
@@ -129,8 +112,8 @@ def main():
 	attribute = langauge_embeddings
 	testclasses_id = np.asarray(UNSEEN_CLASSES)
 	test_id = np.asarray(UNSEEN_CLASSES)
-    att_pro = attribute[test_id]      
-    attributes = torch.from_numpy(attribute)
+	att_pro = attribute[test_id]      
+	attributes = torch.from_numpy(attribute)
 
 ###################################################################
 	test_features_all =  np.load(FEATURE_DIR+FEATURES_TEST_NAME)
@@ -153,9 +136,9 @@ def main():
 			test_seen_label.append(test_label_all[tindx])
 
 	test_features = np.asarray(test_features)
-	test_label = np.asarray(test_label)
+	test_label = np.asarray(test_label).astype(int)
 	test_seen_features = np.asarray(test_seen_features)
-	test_seen_label = np.asarray(test_seen_label)
+	test_seen_label = np.asarray(test_seen_label).astype(int)
 ##################################################################
 
 	test_features = torch.from_numpy(test_features)
@@ -163,7 +146,7 @@ def main():
 	test_seen_features = torch.from_numpy(test_seen_features)
 	test_seen_label=torch.from_numpy(test_seen_label)
 
-    test_attributes = torch.from_numpy(att_pro).float()
+	test_attributes = torch.from_numpy(att_pro).float()
 
 
 #TODO
@@ -193,167 +176,168 @@ def main():
 ######################
 
 
-    train_data = TensorDataset(train_features,train_label)
+	train_data = TensorDataset(train_features,train_label)
 
 
-    # init network
-    print("init networks")
+	# pdb.set_trace()
+	# init network
+	print("init networks")
 
 
 #DTODO: CHNAGE THE NETWORK...........  attribute_network = size of embedding, size of visualfeat/2, size of visualfeat 
 #                                     relation_network =  2* size of visualfeat, some hidden size ....evnetaully this networks output is 1
-    attribute_network = AttributeNetwork(DIM_LANGAUGE,DIM_STGCN/2,DIM_STGCN)
-    relation_network = RelationNetwork(2*DIM_STGCN,DIM_STGCN/2)
+	attribute_network = AttributeNetwork(DIM_LANGAUGE,DIM_STGCN/2,DIM_STGCN)
+	relation_network = RelationNetwork(2*DIM_STGCN,DIM_STGCN/2)
 
-    attribute_network.cuda(GPU)
-    relation_network.cuda(GPU)
+	attribute_network.cuda(GPU)
+	relation_network.cuda(GPU)
 
-    attribute_network_optim = torch.optim.Adam(attribute_network.parameters(),lr=LEARNING_RATE,weight_decay=1e-5)
-    attribute_network_scheduler = StepLR(attribute_network_optim,step_size=200000,gamma=0.5)
-    relation_network_optim = torch.optim.Adam(relation_network.parameters(),lr=LEARNING_RATE)
-    relation_network_scheduler = StepLR(relation_network_optim,step_size=200000,gamma=0.5)
-
-
-    print("training...")
-    last_accuracy = 0.0
-
-    for episode in range(EPISODE):
-        attribute_network_scheduler.step(episode)
-        relation_network_scheduler.step(episode)
-
-        train_loader = DataLoader(train_data,batch_size=BATCH_SIZE,shuffle=True)
-
-        batch_features,batch_labels = train_loader.__iter__().next()
-
-        sample_labels = []
-        for label in batch_labels.numpy():
-            if label not in sample_labels:
-                sample_labels.append(label)
-        # pdb.set_trace()
-        
-        sample_attributes = torch.Tensor([all_attributes[i] for i in sample_labels]).squeeze(1)
-        class_num = sample_attributes.shape[0]
-
-        batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
-        sample_features = attribute_network(Variable(sample_attributes).cuda(GPU)) #k*312
+	attribute_network_optim = torch.optim.Adam(attribute_network.parameters(),lr=LEARNING_RATE,weight_decay=1e-5)
+	attribute_network_scheduler = StepLR(attribute_network_optim,step_size=200000,gamma=0.5)
+	relation_network_optim = torch.optim.Adam(relation_network.parameters(),lr=LEARNING_RATE)
+	relation_network_scheduler = StepLR(relation_network_optim,step_size=200000,gamma=0.5)
 
 
-        sample_features_ext = sample_features.unsqueeze(0).repeat(BATCH_SIZE,1,1)
-        batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
-        batch_features_ext = torch.transpose(batch_features_ext,0,1)
-        
-        #print(sample_features_ext)
-        #print(batch_features_ext)
+	print("training...")
+	last_accuracy = 0.0
 
-#DTODO: CHANGE 4096        
-        relation_pairs = torch.cat((sample_features_ext,batch_features_ext),2).view(-1,2*DIM_STGCN)
-        # pdb.set_trace()
-        relations = relation_network(relation_pairs).view(-1,class_num)
-        #print(relations)
+	for episode in range(EPISODE):
+		attribute_network_scheduler.step(episode)
+		relation_network_scheduler.step(episode)
 
-        # re-build batch_labels according to sample_labels
-        sample_labels = np.array(sample_labels)
-        re_batch_labels = []
-        for label in batch_labels.numpy():
-            index = np.argwhere(sample_labels==label)
-            re_batch_labels.append(index[0][0])
-        re_batch_labels = torch.LongTensor(re_batch_labels)
-        # pdb.set_trace()
-        
+		train_loader = DataLoader(train_data,batch_size=BATCH_SIZE,shuffle=True)
 
-        # loss
-        mse = nn.MSELoss().cuda(GPU)
-        one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1)).cuda(GPU)
-        loss = mse(relations,one_hot_labels)
-        # pdb.set_trace()
+		batch_features,batch_labels = train_loader.__iter__().next()
 
-        # update
-        attribute_network.zero_grad()
-        relation_network.zero_grad()
+		sample_labels = []
+		for label in batch_labels.numpy():
+			if label not in sample_labels:
+				sample_labels.append(label)
+		# pdb.set_trace()
+		
+		sample_attributes = torch.Tensor([all_attributes[i] for i in sample_labels]).squeeze(1)
+		class_num = sample_attributes.shape[0]
 
-        loss.backward()
+		batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
+		sample_features = attribute_network(Variable(sample_attributes).cuda(GPU)) #k*312
 
-        attribute_network_optim.step()
-        relation_network_optim.step()
 
-        if (episode+1)%100 == 0:
-                print("episode:",episode+1,"loss",loss.data[0])
-
-        if (episode+1)%2000 == 0:
-            # test
-            print("Testing...")
-
-            def compute_accuracy(test_features,test_label,test_id,test_attributes):
-                
-                test_data = TensorDataset(test_features,test_label)
-                test_batch = 32
-                test_loader = DataLoader(test_data,batch_size=test_batch,shuffle=False)
-                total_rewards = 0
-                # fetch attributes
-                # pdb.set_trace()
-
-                sample_labels = test_id
-                sample_attributes = test_attributes
-                class_num = sample_attributes.shape[0]
-                test_size = test_features.shape[0]
-                
-                print("class num:",class_num)
-                
-                for batch_features,batch_labels in test_loader:
-
-                    batch_size = batch_labels.shape[0]
-
-                    batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
-                    sample_features = attribute_network(Variable(sample_attributes).cuda(GPU).float())
-
-                    sample_features_ext = sample_features.unsqueeze(0).repeat(batch_size,1,1)
-                    batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
-                    batch_features_ext = torch.transpose(batch_features_ext,0,1)
+		sample_features_ext = sample_features.unsqueeze(0).repeat(BATCH_SIZE,1,1)
+		batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
+		batch_features_ext = torch.transpose(batch_features_ext,0,1)
+		
+		#print(sample_features_ext)
+		#print(batch_features_ext)
 
 #DTODO: CHANGE 4096        
-                    relation_pairs = torch.cat((sample_features_ext,batch_features_ext),2).view(-1,2*DIM_STGCN)
-                    relations = relation_network(relation_pairs).view(-1,class_num)
+		relation_pairs = torch.cat((sample_features_ext,batch_features_ext),2).view(-1,2*DIM_STGCN)
+		# pdb.set_trace()
+		relations = relation_network(relation_pairs).view(-1,class_num)
+		#print(relations)
 
-                    # re-build batch_labels according to sample_labels
+		# re-build batch_labels according to sample_labels
+		sample_labels = np.array(sample_labels)
+		re_batch_labels = []
+		for label in batch_labels.numpy():
+			index = np.argwhere(sample_labels==label)
+			re_batch_labels.append(index[0][0])
+		re_batch_labels = torch.LongTensor(re_batch_labels)
+		# pdb.set_trace()
+		
 
-                    re_batch_labels = []
-                    for label in batch_labels.numpy():
-                        index = np.argwhere(sample_labels==label)
-                        re_batch_labels.append(index[0][0])
-                    re_batch_labels = torch.LongTensor(re_batch_labels)
-                    # pdb.set_trace()
+		# loss
+		mse = nn.MSELoss().cuda(GPU)
+		one_hot_labels = Variable(torch.zeros(BATCH_SIZE, class_num).scatter_(1, re_batch_labels.view(-1,1), 1)).cuda(GPU)
+		loss = mse(relations,one_hot_labels)
+		# pdb.set_trace()
+
+		# update
+		attribute_network.zero_grad()
+		relation_network.zero_grad()
+
+		loss.backward()
+
+		attribute_network_optim.step()
+		relation_network_optim.step()
+
+		if (episode+1)%100 == 0:
+				print("episode:",episode+1,"loss",loss.data[0])
+
+		if (episode+1)%2000 == 0:
+			# test
+			print("Testing...")
+
+			def compute_accuracy(test_features,test_label,test_id,test_attributes):
+				
+				test_data = TensorDataset(test_features,test_label)
+				test_batch = 32
+				test_loader = DataLoader(test_data,batch_size=test_batch,shuffle=False)
+				total_rewards = 0
+				# fetch attributes
+				# pdb.set_trace()
+
+				sample_labels = test_id
+				sample_attributes = test_attributes
+				class_num = sample_attributes.shape[0]
+				test_size = test_features.shape[0]
+				
+				print("class num:",class_num)
+				
+				for batch_features,batch_labels in test_loader:
+
+					batch_size = batch_labels.shape[0]
+
+					batch_features = Variable(batch_features).cuda(GPU).float()  # 32*1024
+					sample_features = attribute_network(Variable(sample_attributes).cuda(GPU).float())
+
+					sample_features_ext = sample_features.unsqueeze(0).repeat(batch_size,1,1)
+					batch_features_ext = batch_features.unsqueeze(0).repeat(class_num,1,1)
+					batch_features_ext = torch.transpose(batch_features_ext,0,1)
+
+#DTODO: CHANGE 4096        
+					relation_pairs = torch.cat((sample_features_ext,batch_features_ext),2).view(-1,2*DIM_STGCN)
+					relations = relation_network(relation_pairs).view(-1,class_num)
+
+					# re-build batch_labels according to sample_labels
+
+					re_batch_labels = []
+					for label in batch_labels.numpy():
+						index = np.argwhere(sample_labels==label)
+						re_batch_labels.append(index[0][0])
+					re_batch_labels = torch.LongTensor(re_batch_labels)
+					# pdb.set_trace()
 
 
-                    _,predict_labels = torch.max(relations.data,1)
-    
-                    rewards = [1 if predict_labels[j]==re_batch_labels[j] else 0 for j in range(batch_size)]
-                    total_rewards += np.sum(rewards)
-                test_accuracy = total_rewards/1.0/test_size
+					_,predict_labels = torch.max(relations.data,1)
+	
+					rewards = [1 if predict_labels[j]==re_batch_labels[j] else 0 for j in range(batch_size)]
+					total_rewards += np.sum(rewards)
+				test_accuracy = total_rewards/1.0/test_size
 
-                return test_accuracy
-            
+				return test_accuracy
+			
 #DTODO: CHANGE np.arrange(50)....to 60...NUMPY ARRAY [0....59]
-            zsl_accuracy = compute_accuracy(test_features,test_label,test_id,test_attributes)
-            gzsl_unseen_accuracy = compute_accuracy(test_features,test_label,np.arange(NO_CLASSES),attributes)
-            gzsl_seen_accuracy = compute_accuracy(test_seen_features,test_seen_label,np.arange(NO_CLASSES),attributes)
-            
-            H = 2 * gzsl_seen_accuracy * gzsl_unseen_accuracy / (gzsl_unseen_accuracy + gzsl_seen_accuracy)
-            
-            print('zsl:', zsl_accuracy)
-            print('gzsl: seen=%.4f, unseen=%.4f, h=%.4f' % (gzsl_seen_accuracy, gzsl_unseen_accuracy, H))
-            
+			zsl_accuracy = compute_accuracy(test_features,test_label,test_id,test_attributes)
+			gzsl_unseen_accuracy = compute_accuracy(test_features,test_label,np.arange(NO_CLASSES),attributes)
+			gzsl_seen_accuracy = compute_accuracy(test_seen_features,test_seen_label,np.arange(NO_CLASSES),attributes)
+			
+			H = 2 * gzsl_seen_accuracy * gzsl_unseen_accuracy / (gzsl_unseen_accuracy + gzsl_seen_accuracy)
+			
+			print('zsl:', zsl_accuracy)
+			print('gzsl: seen=%.4f, unseen=%.4f, h=%.4f' % (gzsl_seen_accuracy, gzsl_unseen_accuracy, H))
+			
 
-            if zsl_accuracy > last_accuracy:
+			if zsl_accuracy > last_accuracy:
 
-                # save networks
-                torch.save(attribute_network.state_dict(),"./models/zsl_awa1_attribute_network_v33.pkl")
-                torch.save(relation_network.state_dict(),"./models/zsl_awa1_relation_network_v33.pkl")
+				# save networks
+				torch.save(attribute_network.state_dict(),"./models_LTC/zsl_attribute_network_v1.pkl")
+				torch.save(relation_network.state_dict(),"./models_LTC/zsl_relation_network_v1.pkl")
 
-                print("save networks for episode:",episode)
+				print("save networks for episode:",episode)
 
-                last_accuracy = zsl_accuracy
+				last_accuracy = zsl_accuracy
 
 
 
 if __name__ == '__main__':
-    main()
+	main()
