@@ -27,6 +27,8 @@ To generate embeddings for action class names:
 - Run generate_embeddings() in neighbours.py to get these embeddings as a .npy
   
   
+  
+  
 
 UNSEEN CLASSES 
 
