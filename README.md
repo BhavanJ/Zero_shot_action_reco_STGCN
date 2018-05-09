@@ -31,8 +31,11 @@ To generate embeddings for action class names:
 UNSEEN CLASSES 
 
 Hand picked   = [3,8,11,16,51]
+
 NEAREST NEIGH = [14,16,43,49,58]
+
 FURTHER NEIGH = [10,24,41,52,55]
+
 Note: The classes go from  0 to 59
 
 
