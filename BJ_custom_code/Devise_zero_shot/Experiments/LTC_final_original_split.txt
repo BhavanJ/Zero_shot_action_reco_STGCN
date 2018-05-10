@@ -1,5 +1,3 @@
-LTC_final_original_split
-
 Afshaans-MBP:EXPERIMENTS afshaan$ pythonw LTC_final_original_split.py 
 ############################
 ############################
@@ -2610,4 +2608,435 @@ Seen videos all classes      : Top1: 41.448657370058775  Top5: 80.58660827474934
 ################
 
 episode: 428500 loss 0.02098127268254757
-e
+episode: 429000 loss 0.027770714834332466
+episode: 429500 loss 0.023484626784920692
+episode: 430000 loss 0.028243692591786385
+Testing...
+###############
+All videos all classes       : Top1: 36.379302525962544  Top5: 73.38442701011292 
+Unseen videos all classes    : Top1: 17.479242069406002  Top5: 46.540344901000644 
+Unseen videos unseen classes : Top1: 65.70151160315095  Top5: -  
+Seen videos all classes      : Top1: 41.49475625216088  Top5: 80.64999423763973 
+################
+
+episode: 430500 loss 0.02474609948694706
+episode: 431000 loss 0.025072382763028145
+episode: 431500 loss 0.0267820805311203
+episode: 432000 loss 0.02827358804643154
+Testing...
+###############
+All videos all classes       : Top1: 36.515350777742505  Top5: 73.4615210194549 
+Unseen videos all classes    : Top1: 17.41537151373217  Top5: 46.58292527144986 
+Unseen videos unseen classes : Top1: 65.82925271449862  Top5: -  
+Seen videos all classes      : Top1: 41.684914140832085  Top5: 80.73642964158118 
+################
+
+episode: 432500 loss 0.025912584736943245
+episode: 433000 loss 0.023367611691355705
+episode: 433500 loss 0.024680299684405327
+episode: 434000 loss 0.025406895205378532
+Testing...
+###############
+All videos all classes       : Top1: 36.49721101083851  Top5: 73.50233549498888 
+Unseen videos all classes    : Top1: 17.436661698956783  Top5: 46.96614860549287 
+Unseen videos unseen classes : Top1: 65.76538215882478  Top5: -  
+Seen videos all classes      : Top1: 41.65610233951826  Top5: 80.68456839921632 
+################
+
+episode: 434500 loss 0.02322806604206562
+episode: 435000 loss 0.02626892924308777
+episode: 435500 loss 0.02918156422674656
+episode: 436000 loss 0.026745524257421494
+Testing...
+###############
+All videos all classes       : Top1: 36.44732665185252  Top5: 73.58849938778287 
+Unseen videos all classes    : Top1: 17.45795188418139  Top5: 47.13647008728976 
+Unseen videos unseen classes : Top1: 65.68022141792633  Top5: -  
+Seen videos all classes      : Top1: 41.586954016365105  Top5: 80.74795436210673 
+################
+
+episode: 436500 loss 0.022976933047175407
+episode: 437000 loss 0.028224274516105652
+episode: 437500 loss 0.02504844218492508
+episode: 438000 loss 0.027490591630339622
+Testing...
+###############
+All videos all classes       : Top1: 36.60604961226248  Top5: 73.66105845539886 
+Unseen videos all classes    : Top1: 17.73472429210134  Top5: 47.200340642963596 
+Unseen videos unseen classes : Top1: 65.70151160315095  Top5: -  
+Seen videos all classes      : Top1: 41.7137259421459  Top5: 80.82286504552265 
+################
+
+episode: 438500 loss 0.021599633619189262
+episode: 439000 loss 0.021377120167016983
+episode: 439500 loss 0.025156574323773384
+episode: 440000 loss 0.029352663084864616
+Testing...
+###############
+All videos all classes       : Top1: 36.72395809713846  Top5: 73.67012833885084 
+Unseen videos all classes    : Top1: 17.947626144347456  Top5: 47.093889716840536 
+Unseen videos unseen classes : Top1: 65.63764104747712  Top5: -  
+Seen videos all classes      : Top1: 41.80592370635012  Top5: 80.86320156736198 
+################
+
+episode: 440500 loss 0.02754043973982334
+episode: 441000 loss 0.026388512924313545
+episode: 441500 loss 0.024065740406513214
+episode: 442000 loss 0.025557994842529297
+Testing...
+###############
+All videos all classes       : Top1: 36.5244206611945  Top5: 73.63838374676885 
+Unseen videos all classes    : Top1: 17.58569299552906  Top5: 47.093889716840536 
+Unseen videos unseen classes : Top1: 65.93570364062167  Top5: -  
+Seen videos all classes      : Top1: 41.6503399792555  Top5: 80.82286504552265 
+################
+
+episode: 442500 loss 0.022365285083651543
+episode: 443000 loss 0.023596620187163353
+episode: 443500 loss 0.02648870274424553
+episode: 444000 loss 0.02275521121919155
+Testing...
+###############
+All videos all classes       : Top1: 36.61058455398848  Top5: 73.59303432950887 
+Unseen videos all classes    : Top1: 17.71343410687673  Top5: 46.81711730892059 
+Unseen videos unseen classes : Top1: 65.70151160315095  Top5: -  
+Seen videos all classes      : Top1: 41.72525066267143  Top5: 80.84015212631094 
+################
+
+episode: 444500 loss 0.027274709194898605
+episode: 445000 loss 0.026069829240441322
+episode: 445500 loss 0.028191735967993736
+episode: 446000 loss 0.029078781604766846
+Testing...
+###############
+All videos all classes       : Top1: 36.72395809713846  Top5: 73.55221985397488 
+Unseen videos all classes    : Top1: 17.649563551202895  Top5: 46.96614860549287 
+Unseen videos unseen classes : Top1: 65.76538215882478  Top5: -  
+Seen videos all classes      : Top1: 41.88659675002881  Top5: 80.74795436210673 
+################
+
+episode: 446500 loss 0.029044492170214653
+episode: 447000 loss 0.020958825945854187
+episode: 447500 loss 0.02084260992705822
+episode: 448000 loss 0.02180413343012333
+Testing...
+###############
+All videos all classes       : Top1: 36.71942315541245  Top5: 73.59303432950887 
+Unseen videos all classes    : Top1: 17.90504577389823  Top5: 46.81711730892059 
+Unseen videos unseen classes : Top1: 65.95699382584628  Top5: -  
+Seen videos all classes      : Top1: 41.811686066612886  Top5: 80.84015212631094 
+################
+
+episode: 448500 loss 0.022058997303247452
+episode: 449000 loss 0.026771746575832367
+episode: 449500 loss 0.02357374131679535
+episode: 450000 loss 0.02483159303665161
+Testing...
+###############
+All videos all classes       : Top1: 36.59697972881049  Top5: 73.62024397986487 
+Unseen videos all classes    : Top1: 17.75601447732595  Top5: 46.96614860549287 
+Unseen videos unseen classes : Top1: 65.89312327017245  Top5: -  
+Seen videos all classes      : Top1: 41.696438861357606  Top5: 80.83438976604818 
+################
+
+episode: 450500 loss 0.022531630471348763
+episode: 451000 loss 0.024842849001288414
+episode: 451500 loss 0.02525971457362175
+episode: 452000 loss 0.024588707834482193
+Testing...
+###############
+All videos all classes       : Top1: 36.72849303886445  Top5: 73.66105845539886 
+Unseen videos all classes    : Top1: 17.777304662550563  Top5: 46.944858420268254 
+Unseen videos unseen classes : Top1: 65.807962529274  Top5: -  
+Seen videos all classes      : Top1: 41.85778494871499  Top5: 80.8920133686758 
+################
+
+episode: 452500 loss 0.02047058939933777
+episode: 453000 loss 0.02584882639348507
+episode: 453500 loss 0.019831819459795952
+episode: 454000 loss 0.02152862772345543
+Testing...
+###############
+All videos all classes       : Top1: 36.78744728130244  Top5: 73.77896694027481 
+Unseen videos all classes    : Top1: 17.73472429210134  Top5: 47.115179902065144 
+Unseen videos unseen classes : Top1: 66.08473493719396  Top5: -  
+Seen videos all classes      : Top1: 41.944220352656444  Top5: 80.99573585340556 
+################
+
+episode: 454500 loss 0.030295055359601974
+episode: 455000 loss 0.02546442486345768
+episode: 455500 loss 0.020703863352537155
+episode: 456000 loss 0.02566961757838726
+Testing...
+###############
+All videos all classes       : Top1: 36.84186658201442  Top5: 73.8560609496168 
+Unseen videos all classes    : Top1: 17.968916329572068  Top5: 47.51969342133277 
+Unseen videos unseen classes : Top1: 65.78667234404939  Top5: -  
+Seen videos all classes      : Top1: 41.94998271291921  Top5: 80.98421113288002 
+################
+
+episode: 456500 loss 0.029774900525808334
+episode: 457000 loss 0.027433546259999275
+episode: 457500 loss 0.029340295121073723
+episode: 458000 loss 0.02217862755060196
+Testing...
+###############
+All videos all classes       : Top1: 36.801052106480434  Top5: 73.76536211509682 
+Unseen videos all classes    : Top1: 18.203108367042795  Top5: 47.43453268043432 
+Unseen videos unseen classes : Top1: 65.82925271449862  Top5: -  
+Seen videos all classes      : Top1: 41.834735507663936  Top5: 80.8920133686758 
+################
+
+episode: 458500 loss 0.027401136234402657
+episode: 459000 loss 0.026859194040298462
+episode: 459500 loss 0.02395772747695446
+episode: 460000 loss 0.026317493990063667
+Testing...
+###############
+All videos all classes       : Top1: 36.782912339576434  Top5: 73.8197814158088 
+Unseen videos all classes    : Top1: 18.11794762614435  Top5: 47.306791569086656 
+Unseen videos unseen classes : Top1: 65.9782840110709  Top5: -  
+Seen videos all classes      : Top1: 41.834735507663936  Top5: 80.99573585340556 
+################
+
+episode: 460500 loss 0.028381764888763428
+episode: 461000 loss 0.024662084877490997
+episode: 461500 loss 0.025141920894384384
+episode: 462000 loss 0.02423979714512825
+Testing...
+###############
+All videos all classes       : Top1: 36.87361117409641  Top5: 73.8379211827128 
+Unseen videos all classes    : Top1: 17.968916329572068  Top5: 47.115179902065144 
+Unseen videos unseen classes : Top1: 65.91441345539705  Top5: -  
+Seen videos all classes      : Top1: 41.99031923475856  Top5: 81.07064653682147 
+################
+
+episode: 462500 loss 0.023380465805530548
+episode: 463000 loss 0.022181591019034386
+episode: 463500 loss 0.023821432143449783
+episode: 464000 loss 0.0270832646638155
+Testing...
+###############
+All videos all classes       : Top1: 36.71942315541245  Top5: 73.8787356582468 
+Unseen videos all classes    : Top1: 17.86246540344901  Top5: 47.5835639770066 
+Unseen videos unseen classes : Top1: 65.91441345539705  Top5: -  
+Seen videos all classes      : Top1: 41.82321078713841  Top5: 80.99573585340556 
+################
+
+episode: 464500 loss 0.029488002881407738
+episode: 465000 loss 0.021516257897019386
+episode: 465500 loss 0.02729920484125614
+episode: 466000 loss 0.025161968544125557
+Testing...
+###############
+All videos all classes       : Top1: 36.86907623237041  Top5: 73.8197814158088 
+Unseen videos all classes    : Top1: 18.16052799659357  Top5: 47.34937193953587 
+Unseen videos unseen classes : Top1: 65.85054289972322  Top5: -  
+Seen videos all classes      : Top1: 41.93269563213092  Top5: 80.98421113288002 
+################
+
+episode: 466500 loss 0.021712901070713997
+episode: 467000 loss 0.024393348023295403
+episode: 467500 loss 0.023167883977293968
+episode: 468000 loss 0.02568507008254528
+Testing...
+###############
+All videos all classes       : Top1: 36.8917509410004  Top5: 73.92862001723279 
+Unseen videos all classes    : Top1: 17.99020651479668  Top5: 47.711305088354266 
+Unseen videos unseen classes : Top1: 65.807962529274  Top5: -  
+Seen videos all classes      : Top1: 42.007606315546845  Top5: 81.02454765471937 
+################
+
+episode: 468500 loss 0.020890027284622192
+episode: 469000 loss 0.0250086709856987
+episode: 469500 loss 0.024734225124120712
+episode: 470000 loss 0.02252637781202793
+Testing...
+###############
+All videos all classes       : Top1: 36.937100358260395  Top5: 73.8107115323568 
+Unseen videos all classes    : Top1: 18.096657440919735  Top5: 47.306791569086656 
+Unseen videos unseen classes : Top1: 65.91441345539705  Top5: -  
+Seen videos all classes      : Top1: 42.036418116860666  Top5: 80.98421113288002 
+################
+
+episode: 470500 loss 0.02350202575325966
+episode: 471000 loss 0.02474120259284973
+episode: 471500 loss 0.02293994463980198
+episode: 472000 loss 0.023617638275027275
+Testing...
+###############
+All videos all classes       : Top1: 36.90082082445241  Top5: 73.89234048342479 
+Unseen videos all classes    : Top1: 17.968916329572068  Top5: 47.51969342133277 
+Unseen videos unseen classes : Top1: 65.93570364062167  Top5: -  
+Seen videos all classes      : Top1: 42.02489339633514  Top5: 81.03031001498213 
+################
+
+episode: 472500 loss 0.022651247680187225
+episode: 473000 loss 0.031334176659584045
+episode: 473500 loss 0.025447579100728035
+episode: 474000 loss 0.023624761030077934
+Testing...
+###############
+All videos all classes       : Top1: 36.97791483379439  Top5: 73.92408507550678 
+Unseen videos all classes    : Top1: 18.054077070470516  Top5: 47.540983606557376 
+Unseen videos unseen classes : Top1: 65.91441345539705  Top5: -  
+Seen videos all classes      : Top1: 42.09980407975107  Top5: 81.06488417655872 
+################
+
+episode: 474500 loss 0.024845309555530548
+episode: 475000 loss 0.024838434532284737
+episode: 475500 loss 0.024390334263443947
+episode: 476000 loss 0.03255502134561539
+Testing...
+###############
+All videos all classes       : Top1: 37.02779919278038  Top5: 73.91501519205478 
+Unseen videos all classes    : Top1: 17.926335959122845  Top5: 47.540983606557376 
+Unseen videos unseen classes : Top1: 65.99957419629551  Top5: -  
+Seen videos all classes      : Top1: 42.197764204218046  Top5: 81.05335945603319 
+################
+
+episode: 476500 loss 0.024721765890717506
+episode: 477000 loss 0.024332458153367043
+episode: 477500 loss 0.022649690508842468
+episode: 478000 loss 0.024938782677054405
+Testing...
+###############
+All videos all classes       : Top1: 37.13210285247834  Top5: 73.87420071652079 
+Unseen videos all classes    : Top1: 18.26697892271663  Top5: 47.3919523099851 
+Unseen videos unseen classes : Top1: 66.10602512241857  Top5: -  
+Seen videos all classes      : Top1: 42.23810072605739  Top5: 81.04183473550766 
+################
+
+episode: 478500 loss 0.02485569380223751
+episode: 479000 loss 0.02557266131043434
+episode: 479500 loss 0.026707403361797333
+episode: 480000 loss 0.029837774112820625
+Testing...
+###############
+All videos all classes       : Top1: 36.95524012516439  Top5: 73.8515260078908 
+Unseen videos all classes    : Top1: 18.096657440919735  Top5: 47.07259953161593 
+Unseen videos unseen classes : Top1: 66.38279753033851  Top5: -  
+Seen videos all classes      : Top1: 42.059467557911724  Top5: 81.09945833813529 
+################
+
+episode: 480500 loss 0.022527584806084633
+episode: 481000 loss 0.0237649604678154
+episode: 481500 loss 0.021814001724123955
+episode: 482000 loss 0.02285258285701275
+Testing...
+###############
+All videos all classes       : Top1: 37.11849802730035  Top5: 73.93768990068477 
+Unseen videos all classes    : Top1: 17.968916329572068  Top5: 47.540983606557376 
+Unseen videos unseen classes : Top1: 66.21247604854162  Top5: -  
+Seen videos all classes      : Top1: 42.30148668894779  Top5: 81.08217125734701 
+################
+
+episode: 482500 loss 0.021890195086598396
+episode: 483000 loss 0.026172051206231117
+episode: 483500 loss 0.028825461864471436
+episode: 484000 loss 0.027359992265701294
+Testing...
+###############
+All videos all classes       : Top1: 37.13210285247834  Top5: 73.97850437621877 
+Unseen videos all classes    : Top1: 18.0327868852459  Top5: 47.69001490312966 
+Unseen videos unseen classes : Top1: 65.57377049180327  Top5: -  
+Seen videos all classes      : Top1: 42.30148668894779  Top5: 81.09369597787254 
+################
+
+episode: 484500 loss 0.028624558821320534
+episode: 485000 loss 0.02520187757909298
+episode: 485500 loss 0.024585070088505745
+episode: 486000 loss 0.025558849796652794
+Testing...
+###############
+All videos all classes       : Top1: 37.16838238628634  Top5: 73.8243163575348 
+Unseen videos all classes    : Top1: 17.883755588673623  Top5: 47.15776027251437 
+Unseen videos unseen classes : Top1: 65.99957419629551  Top5: -  
+Seen videos all classes      : Top1: 42.38792209288925  Top5: 81.04183473550766 
+################
+
+episode: 486500 loss 0.02583073265850544
+episode: 487000 loss 0.026488330215215683
+episode: 487500 loss 0.02046847715973854
+episode: 488000 loss 0.029120860621333122
+Testing...
+###############
+All videos all classes       : Top1: 37.19105709491633  Top5: 73.99210920139676 
+Unseen videos all classes    : Top1: 17.968916329572068  Top5: 47.56227379178199 
+Unseen videos unseen classes : Top1: 66.08473493719396  Top5: -  
+Seen videos all classes      : Top1: 42.393684453152005  Top5: 81.14555722023741 
+################
+
+episode: 488500 loss 0.028051795437932014
+episode: 489000 loss 0.025950806215405464
+episode: 489500 loss 0.025604460388422012
+episode: 490000 loss 0.027923481538891792
+Testing...
+###############
+All videos all classes       : Top1: 37.372454763956284  Top5: 74.00571402657475 
+Unseen videos all classes    : Top1: 18.0327868852459  Top5: 48.00936768149883 
+Unseen videos unseen classes : Top1: 65.85054289972322  Top5: -  
+Seen videos all classes      : Top1: 42.60689178287427  Top5: 81.04183473550766 
+################
+
+episode: 490500 loss 0.026071924716234207
+episode: 491000 loss 0.02924688719213009
+episode: 491500 loss 0.0252282302826643
+episode: 492000 loss 0.021464034914970398
+Testing...
+###############
+All videos all classes       : Top1: 37.236406512176316  Top5: 73.97396943449277 
+Unseen videos all classes    : Top1: 18.096657440919735  Top5: 47.47711305088354 
+Unseen videos unseen classes : Top1: 66.29763678944008  Top5: -  
+Seen videos all classes      : Top1: 42.41673389420307  Top5: 81.14555722023741 
+################
+
+episode: 492500 loss 0.027020631358027458
+episode: 493000 loss 0.026071032509207726
+episode: 493500 loss 0.023460032418370247
+episode: 494000 loss 0.028581704944372177
+Testing...
+###############
+All videos all classes       : Top1: 37.34071017187429  Top5: 74.10548274454673 
+Unseen videos all classes    : Top1: 18.28826910794124  Top5: 48.05194805194805 
+Unseen videos unseen classes : Top1: 65.48860975090484  Top5: -  
+Seen videos all classes      : Top1: 42.497406937881756  Top5: 81.15708194076294 
+################
+
+episode: 494500 loss 0.027428269386291504
+episode: 495000 loss 0.024852817878127098
+episode: 495500 loss 0.026118019595742226
+episode: 496000 loss 0.026347966864705086
+Testing...
+###############
+All videos all classes       : Top1: 37.20466192009433  Top5: 74.00571402657475 
+Unseen videos all classes    : Top1: 18.11794762614435  Top5: 47.370662124760486 
+Unseen videos unseen classes : Top1: 66.08473493719396  Top5: -  
+Seen videos all classes      : Top1: 42.370635012100955  Top5: 81.21470554339058 
+################
+
+episode: 496500 loss 0.021669335663318634
+episode: 497000 loss 0.026649221777915955
+episode: 497500 loss 0.02508682571351528
+episode: 498000 loss 0.021417463198304176
+Testing...
+###############
+All videos all classes       : Top1: 37.381524647408284  Top5: 74.04652850210874 
+Unseen videos all classes    : Top1: 18.245688737492017  Top5: 48.07323823717266 
+Unseen videos unseen classes : Top1: 65.807962529274  Top5: -  
+Seen videos all classes      : Top1: 42.56079290077216  Top5: 81.07640889708425 
+################
+
+episode: 498500 loss 0.023714279755949974
+episode: 499000 loss 0.020934434607625008
+episode: 499500 loss 0.0251665897667408
+episode: 500000 loss 0.022859778255224228
+Testing...
+###############
+All videos all classes       : Top1: 37.16838238628634  Top5: 74.15536710353273 
+Unseen videos all classes    : Top1: 18.0327868852459  Top5: 47.988077496274215 
+Unseen videos unseen classes : Top1: 65.6163508622525  Top5: -  
+Seen videos all classes      : Top1: 42.3475855710499  Top5: 81.23775498444162 
+################
+
+Afshaans-MBP:EXPERIMENTS afshaan$ 
